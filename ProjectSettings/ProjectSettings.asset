@@ -754,11 +754,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: d1598ade-63ad-4f69-9d41-77e8ef5dffab
+  cloudProjectId: 1c78e469-70f8-48c4-a13b-ea2ccd193ae5
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: Final Project
-  organizationId: sweet1steysi
+  organizationId: kc9900
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
