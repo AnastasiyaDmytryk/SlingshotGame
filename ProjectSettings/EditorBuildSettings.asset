@@ -17,4 +17,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levl3.unity
     guid: 900b2b4250fa141b18444af14300b427
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 5bd01206d75f2b14cae093fbf895114e, type: 2}

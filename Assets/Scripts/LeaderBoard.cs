@@ -14,10 +14,15 @@ public class LeaderBoard : MonoBehaviour
     [SerializeField] 
     private List<TextMeshProUGUI> scores;
 
+    private void Start(){
+        GetLeaderboard();
+    }
+
     public void GetLeaderboard(){
         LeaderboardCreator.GetLeaderboard(publicLeaderBKey, ((msg) =>
         {
-            for(int i = 0; i < names.Count; i++){
+            int leaderBLength = (msg.Length < names.Count) ? msg.Length : names.Count;
+            for(int i = 0; i < leaderBLength; i++){
                 names[i].text = msg[i].Username;
                 scores[i].text = msg[i].Score.ToString();
             }
