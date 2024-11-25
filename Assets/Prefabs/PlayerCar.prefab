@@ -142,7 +142,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6645616114513181105, guid: 62010132604e8c94d96b4cb4fe6d3394, type: 3}
       propertyPath: m_Name
-      value: Free Racing Car Purple Variant Variant
       value: PlayerCar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
