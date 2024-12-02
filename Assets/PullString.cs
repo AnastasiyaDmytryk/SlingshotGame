@@ -10,7 +10,7 @@ public class PullString : MonoBehaviour
     public Transform CenterPoint;
     LineRenderer SlingshotString;
     public Vector3 currentMouseWorldPosition;
-    public bool move;
+    public bool move=true;
     public GameObject Carprefab;
     public GameObject Car;
     Rigidbody rb;
@@ -22,12 +22,13 @@ public class PullString : MonoBehaviour
 
     void Start()
     {
-        move = true;
+        
         SlingshotString = GetComponent<LineRenderer>();
         SlingshotString.SetPositions(new Vector3[3] { LeftPoint.position, CenterPoint.position, RightPoint.position });
 
         // Instantiate the car and find its camera
         Car = Instantiate(Carprefab, CenterPoint.position, Quaternion.identity);
+        Car.transform.localScale = Vector3.one * 0.3f;
         rb = Car.GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezePosition;
 
@@ -42,19 +43,32 @@ public class PullString : MonoBehaviour
     }
 
     public void OnPointerPosition(InputAction.CallbackContext pr)
+{
+    Debug.Log("started");
+    if (pr.started)
     {
-        // Getting mouse
-        if (pr.performed)
+        Vector3 mousePosition = Mouse.current.position.ReadValue();
+        
+        // Define the plane of interaction at Y = 1 (or whatever height your ground is)
+        Plane groundPlane = new Plane(Vector3.up, new Vector3(0, 1, 0));
+        
+        // Create a ray from the camera through the mouse position
+        Ray ray = slingshotCamera.ScreenPointToRay(mousePosition);
+        
+        // Calculate the point of intersection with the plane
+        float enter;
+        if (groundPlane.Raycast(ray, out enter))
         {
-            Vector3 temp = Mouse.current.position.ReadValue();
-            Ray ray = Camera.main.ScreenPointToRay(temp);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
-            {
-                currentMouseWorldPosition = new Vector3(hit.point.x, 1, hit.point.z);
-            }
+            currentMouseWorldPosition = ray.GetPoint(enter);
+            Debug.Log($"Calculated World Position: {currentMouseWorldPosition}");
+        }
+        else
+        {
+            Debug.Log("Mouse is not over the ground plane.");
         }
     }
+}
+
 
     public void OnClick(InputAction.CallbackContext cl)
     {
@@ -90,6 +104,9 @@ public class PullString : MonoBehaviour
 
     void Update()
     {
+  
+        //Debug.Log(currentMouseWorldPosition);
+
         if (move == true)
         {
             // Moving the rubber

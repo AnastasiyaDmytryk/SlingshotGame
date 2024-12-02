@@ -6,6 +6,8 @@ using UnityEngine;
 public class CarController : MonoBehaviour
 {
     // Public variables for tuning
+    public bool isMovementAllowed = false; // Indicates if the car is allowed to move
+
     public float motorForce = 1000f;
     public float maxSteeringAngle = 15f;   // Reduced for better control
     public float brakeForce = 3000f;
@@ -54,6 +56,11 @@ public class CarController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!isMovementAllowed)
+    {
+        ApplyBraking(); // Apply brakes to stop the car
+        return;
+    }
         GetInput();
         HandleMotor();
         HandleSteering();
