@@ -13,9 +13,8 @@ public class LeaderBoard : MonoBehaviour
 
     [SerializeField] 
     private List<TextMeshProUGUI> scores;
-
-    [SerializeField] 
-    private List<TextMeshProUGUI> times;
+    
+    
 
     private void Start(){
         GetLeaderboard();
@@ -28,13 +27,12 @@ public class LeaderBoard : MonoBehaviour
             for(int i = 0; i < leaderBLength; i++){
                 names[i].text = msg[i].Username;
                 scores[i].text = msg[i].Score.ToString();
-                times[i].text = msg[i].TimeDone;
             }
         }));
     }
 
-    public void SetBoard(string username, int score, string timeDone){
-        LeaderboardCreator.UploadNewEntry(publicLeaderBKey, username, score, timeDone, ((msg) => 
+    public void SetBoard(string username, int score){
+        LeaderboardCreator.UploadNewEntry(publicLeaderBKey, username, score, ((msg) => 
         {
             GetLeaderboard();
         }));
