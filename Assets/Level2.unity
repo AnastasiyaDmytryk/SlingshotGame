@@ -271,7 +271,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -364,7 +363,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -675,7 +673,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -908,7 +905,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -1001,7 +997,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -1188,7 +1183,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -1405,7 +1399,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -1746,7 +1739,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -2119,7 +2111,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -2274,7 +2265,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -2647,7 +2637,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -2669,6 +2658,79 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
+--- !u!1001 &484184356
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3832525201858126470, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
+      propertyPath: offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068578628773583000, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068578628773583000, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068578628773583000, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068578628773583000, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.6577606
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068578628773583000, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.6039729
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068578628773583000, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.779001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068578628773583000, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8432968
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068578628773583000, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0033956985
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068578628773583000, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.53729457
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068578628773583000, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.012394595
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068578628773583000, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -0.435
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068578628773583000, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -65
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068578628773583000, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -1.407
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706736200202057924, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
+      propertyPath: m_Name
+      value: PlayerCar3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
 --- !u!1 &484779575
 GameObject:
   m_ObjectHideFlags: 0
@@ -3254,7 +3316,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -3565,7 +3626,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -4036,7 +4096,7 @@ Transform:
   m_GameObject: {fileID: 746202143}
   serializedVersion: 2
   m_LocalRotation: {x: -0.45135918, y: -0, z: -0, w: 0.8923424}
-  m_LocalPosition: {x: 30, y: -2.71, z: 0.6}
+  m_LocalPosition: {x: 30, y: -3.25, z: 0.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4080,7 +4140,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -4251,7 +4310,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -4500,7 +4558,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -4784,7 +4841,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6421294179457242297, guid: 6cc76445391501dda8ef9608919e7449, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.907955
+      value: 31.194
       objectReference: {fileID: 0}
     - target: {fileID: 6421294179457242297, guid: 6cc76445391501dda8ef9608919e7449, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4792,7 +4849,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6421294179457242297, guid: 6cc76445391501dda8ef9608919e7449, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.4772415
+      value: 9.37
       objectReference: {fileID: 0}
     - target: {fileID: 6421294179457242297, guid: 6cc76445391501dda8ef9608919e7449, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5167,7 +5224,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -5384,7 +5440,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -5543,6 +5598,7 @@ GameObject:
   - component: {fileID: 1103693846}
   - component: {fileID: 1103693845}
   - component: {fileID: 1103693844}
+  - component: {fileID: 1103693848}
   m_Layer: 0
   m_Name: Spline
   m_TagString: Untagged
@@ -5671,17 +5727,17 @@ MonoBehaviour:
       TangentIn:
         x: 0
         y: 0
-        z: -5.0432916
+        z: -5.790964
       TangentOut:
         x: 0
         y: 0
-        z: 5.0432916
+        z: 5.790964
       Rotation:
         value:
-          x: 0
-          y: 0.7161119
-          z: 0
-          w: -0.6979854
+          x: -0.17734052
+          y: 0.69261366
+          z: -0.18194613
+          w: -0.6750794
     - Position:
         x: -4.976998
         y: 0.0000019073486
@@ -5725,35 +5781,35 @@ MonoBehaviour:
       TangentIn:
         x: -0
         y: -0
-        z: -1.2312
+        z: -1.2833987
       TangentOut:
         x: 0
         y: 0
-        z: 1.3024161
+        z: 2.227192
       Rotation:
         value:
-          x: 0
-          y: -0.3513127
-          z: -0
-          w: 0.93625814
+          x: -0.2843102
+          y: -0.3871049
+          z: -0.10070253
+          w: 0.8713074
     - Position:
-        x: -14.801722
-        y: 0
-        z: 6.0758133
+        x: -14.8008175
+        y: 10.48
+        z: 6.072386
       TangentIn:
         x: -0
         y: -0
-        z: -1.4108797
+        z: -2.865188
       TangentOut:
         x: 0
         y: 0
-        z: 2.598526
+        z: 1.9474117
       Rotation:
         value:
-          x: -0.32649153
-          y: -0.111183226
-          z: -0.0044805524
-          w: 0.93862736
+          x: -0.45717958
+          y: -0.006460889
+          z: -0.074290074
+          w: 0.8862428
     - Position:
         x: -13.440818
         y: 13.6
@@ -5761,17 +5817,17 @@ MonoBehaviour:
       TangentIn:
         x: -0
         y: -0
-        z: -4.019453
+        z: -1.8129492
       TangentOut:
         x: 0
         y: 0
-        z: 3.0054607
+        z: 2.239171
       Rotation:
         value:
-          x: -0.5127588
-          y: 0.34656423
-          z: 0.27704194
-          w: 0.73499614
+          x: -0.38311824
+          y: 0.32135966
+          z: 0.26791495
+          w: 0.8235107
     - Position:
         x: -10.650818
         y: 20.9
@@ -5815,35 +5871,35 @@ MonoBehaviour:
       TangentIn:
         x: -0
         y: -0
-        z: -2.0446146
+        z: -1.9693233
       TangentOut:
         x: 0
         y: 0
-        z: 1.4164562
+        z: 1.2396094
       Rotation:
         value:
-          x: 0.10177682
-          y: 0.85629874
-          z: -0.2308326
-          w: 0.4506776
+          x: 0.08613123
+          y: 0.8248652
+          z: -0.2364728
+          w: 0.5062208
     - Position:
         x: 1.2391825
         y: 0
-        z: 8.402386
+        z: 9.549386
       TangentIn:
         x: -0
         y: -0
-        z: -1.3964282
+        z: -1.1920485
       TangentOut:
         x: 0
         y: 0
-        z: 2.3019407
+        z: 2.20765
       Rotation:
         value:
-          x: -0.0433271
-          y: 0.91771346
-          z: 0.30385745
-          w: 0.2521817
+          x: -0.025381425
+          y: 0.903353
+          z: 0.30208904
+          w: 0.30339977
     - Position:
         x: 1.2891822
         y: 10.599999
@@ -5851,17 +5907,17 @@ MonoBehaviour:
       TangentIn:
         x: -0
         y: -0
-        z: -2.9226003
+        z: -3.0254607
       TangentOut:
         x: 0
         y: 0
-        z: 1.8508323
+        z: 1.8769484
       Rotation:
         value:
-          x: -0.05006661
-          y: 0.8700482
-          z: 0.48995805
-          w: 0.021227175
+          x: -0.0507704
+          y: 0.8807348
+          z: 0.47044608
+          w: 0.020227784
     - Position:
         x: 1.1591821
         y: 14.099999
@@ -5995,71 +6051,71 @@ MonoBehaviour:
       TangentIn:
         x: -0
         y: -0
-        z: -3.6152744
+        z: -3.7196865
       TangentOut:
         x: 0
         y: 0
-        z: 6.004315
+        z: 6.6431136
       Rotation:
         value:
-          x: -0.39797413
-          y: 0.28613934
-          z: -0.114239186
-          w: 0.8641125
+          x: -0.40807095
+          y: 0.2964097
+          z: -0.11452177
+          w: 0.85586464
     - Position:
         x: 22.579182
-        y: -4
+        y: 2.13
         z: 3.1423862
       TangentIn:
         x: -0
         y: -0
-        z: -9.840319
+        z: -9.061247
       TangentOut:
         x: 0
         y: 0
-        z: 7.2227726
+        z: 5.458807
       Rotation:
         value:
-          x: -0.4593387
-          y: -0.507468
-          z: -0.24105957
-          w: 0.6880222
+          x: -0.41176248
+          y: -0.5637986
+          z: -0.17055677
+          w: 0.6953367
     - Position:
         x: 7.809182
-        y: 9.6
+        y: 6.950001
         z: 0.28238606
       TangentIn:
         x: -0
         y: -0
-        z: -2.803765
+        z: -2.8143446
       TangentOut:
         x: 0
         y: 0
-        z: 1.124675
+        z: 1.3168795
       Rotation:
         value:
-          x: -0.15216546
-          y: 0.73578703
-          z: 0.118209116
-          w: -0.64922243
+          x: -0.2294549
+          y: 0.7171278
+          z: 0.028263165
+          w: -0.65747964
     - Position:
         x: 5.4991827
-        y: 7.3
+        y: 4.38
         z: 0.13238621
       TangentIn:
         x: -0
         y: -0
-        z: -1.358208
+        z: -1.3505577
       TangentOut:
         x: 0
         y: 0
-        z: 2.2731488
+        z: 1.9256381
       Rotation:
         value:
-          x: 0.35460457
-          y: -0.6240258
-          z: 0.23056106
-          w: 0.65703046
+          x: 0.32449844
+          y: -0.64055
+          z: 0.19679625
+          w: 0.6675835
     m_MetaData:
     - Mode: 2
       Tension: 0.5
@@ -6116,6 +6172,28 @@ MonoBehaviour:
       m_Data: []
   m_Knots:
     m_KnotsLink: []
+--- !u!64 &1103693848
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103693842}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: b360a5576a709497d81eb589773858a3, type: 2}
 --- !u!1001 &1104590128
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6249,7 +6327,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -6342,7 +6419,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -7197,7 +7273,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -7290,7 +7365,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -7624,6 +7698,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2323270030060967864, guid: 813c4a802d5e4cf48a8c35827d1e21d7, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2861844826631254096, guid: 813c4a802d5e4cf48a8c35827d1e21d7, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3131753696328158466, guid: 813c4a802d5e4cf48a8c35827d1e21d7, type: 3}
@@ -8069,7 +8147,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -8302,7 +8379,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -8629,7 +8705,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -9344,7 +9419,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -9779,7 +9853,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -9872,7 +9945,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -9965,7 +10037,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -10058,7 +10129,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -10221,7 +10291,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -10337,98 +10406,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &1869551037
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1869551040}
-  - component: {fileID: 1869551039}
-  - component: {fileID: 1869551038}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!81 &1869551038
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1869551037}
-  m_Enabled: 1
---- !u!20 &1869551039
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1869551037}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 50
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &1869551040
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1869551037}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1875014029
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10718,7 +10695,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -11419,7 +11395,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -11684,7 +11659,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -11905,7 +11879,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -12175,7 +12148,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -12201,6 +12173,6 @@ Terrain:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1869551040}
   - {fileID: 667897996}
   - {fileID: 2137131943}
+  - {fileID: 484184356}

@@ -38,10 +38,10 @@ public class CarController : MonoBehaviour
         }
 
         // Adjust the center of mass
-        rb.centerOfMass = new Vector3(0, -1.0f, 0); // Adjusted for better balance
+        rb.centerOfMass = new Vector3(0, -0.25f, 0); // Adjusted for better balance
 
         // Set Rigidbody mass and drag
-        rb.mass = 1500f;
+        rb.mass = 2000f;
         rb.drag = 0.2f;          // Increased for more stability
         rb.angularDrag = 7f;     // Increased to reduce spinning out
 
@@ -137,10 +137,10 @@ public class CarController : MonoBehaviour
     {
         WheelFrictionCurve forwardFriction = wheel.forwardFriction;
         forwardFriction.extremumSlip = 0.2f;
-        forwardFriction.extremumValue = 1f;
-        forwardFriction.asymptoteSlip = 0.5f;
-        forwardFriction.asymptoteValue = 0.75f;
-        forwardFriction.stiffness = 2f;
+        forwardFriction.extremumValue = 1.25f;
+        forwardFriction.asymptoteSlip = 0.3f;
+        forwardFriction.asymptoteValue = 1f;
+        forwardFriction.stiffness = 3f;
         wheel.forwardFriction = forwardFriction;
 
         WheelFrictionCurve sidewaysFriction = wheel.sidewaysFriction;
