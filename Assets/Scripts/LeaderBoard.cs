@@ -13,6 +13,8 @@ public class LeaderBoard : MonoBehaviour
 
     [SerializeField] 
     private List<TextMeshProUGUI> scores;
+    
+    
 
     private void Start(){
         GetLeaderboard();
@@ -35,4 +37,6 @@ public class LeaderBoard : MonoBehaviour
             GetLeaderboard();
         }));
     }
+    
+    
 }

@@ -14,6 +14,17 @@ public class StartGame : MonoBehaviour
     public void goToGame()
     {
         SceneManager.LoadScene("levltown");
+        Debug.Log("START");
+    }
+
+    public void goToLevel2()
+    {
+        SceneManager.LoadScene("Level2");
+    }
+
+    public void goToLevel3()
+    {
+        SceneManager.LoadScene("Levl3");
     }
 
     // Update is called once per frame
