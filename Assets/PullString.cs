@@ -35,6 +35,7 @@ public class PullString : MonoBehaviour
         
         rb = Car.GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezePosition;
+        rb.constraints = RigidbodyConstraints.FreezeRotation;
 
         // Find the car camera and disable it initially
         carCamera = Car.GetComponentInChildren<Camera>();
