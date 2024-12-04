@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - SpeedUp
+  - Fire
+  - racerAI
+  - Marker
   layers:
   - Default
   - TransparentFX
