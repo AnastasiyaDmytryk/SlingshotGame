@@ -14,6 +14,7 @@ public class StartGame : MonoBehaviour
     public void goToGame()
     {
         SceneManager.LoadScene("levltown");
+        Debug.Log("START");
     }
 
     public void goToLevel2()
