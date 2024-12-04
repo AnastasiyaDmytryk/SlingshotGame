@@ -6,8 +6,10 @@ using TMPro;
 public class LapCounter : MonoBehaviour
 {
     public TextMeshProUGUI laps;
+    public TextMeshProUGUI pointText;
     public GameObject Leaderboard;
-    int lapNum = 0;
+    public int lapNum = 0;
+    public int points = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,5 +30,10 @@ public class LapCounter : MonoBehaviour
             lapNum += 1;
             laps.text = "Lap: " + lapNum +"/3";
         }
+        if(collision.gameObject.tag == "pUp"){
+            points +=1;
+            pointText.text = ("Points: " + points);
+        }
+
     }
 }

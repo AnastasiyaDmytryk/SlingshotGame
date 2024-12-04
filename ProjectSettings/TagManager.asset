@@ -6,6 +6,7 @@ TagManager:
   tags:
   - SpeedUp
   - Lap
+  - pUp
   layers:
   - Default
   - TransparentFX
