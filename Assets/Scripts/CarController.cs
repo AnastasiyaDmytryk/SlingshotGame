@@ -6,13 +6,11 @@ using Debug = UnityEngine.Debug;
 
 public class CarController : MonoBehaviour
 {
-    // Public variables for tuning
-    public bool isMovementAllowed = false; // Indicates if the car is allowed to move
-
+    
     public float motorForce = 1000f;
-    public float maxSteeringAngle = 15f;   // Reduced for better control
+    public float maxSteeringAngle = 15f;   
     public float brakeForce = 3000f;
-    public float downforce = 75f;          // Increased for stability
+    public float downforce = 75f;          
 
     public WheelCollider frontLeftWheelCollider;
     public WheelCollider frontRightWheelCollider;
@@ -42,15 +40,15 @@ public class CarController : MonoBehaviour
             UnityEngine.Debug.LogError("Rigidbody component missing! Please add a Rigidbody to your car object.");
         }
 
-        // Adjust the center of mass
-        rb.centerOfMass = new Vector3(0, -1.0f, 0); // Adjusted for better balance
+       
+        rb.centerOfMass = new Vector3(0, -0.25f, 0);
 
-        // Set Rigidbody mass and drag
-        rb.mass = 1500f;
-        rb.drag = 0.2f;          // Increased for more stability
-        rb.angularDrag = 7f;     // Increased to reduce spinning out
+        
+        rb.mass = 2000f;
+        rb.drag = 0.2f;          
+        rb.angularDrag = 7f;     
 
-        // Adjust wheel friction and suspension settings
+       
         AdjustWheel(frontLeftWheelCollider);
         AdjustWheel(frontRightWheelCollider);
         AdjustWheel(rearLeftWheelCollider);
@@ -59,25 +57,18 @@ public class CarController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
-            if (!isMovementAllowed)
-            {
-                ApplyBraking(); // Apply brakes to stop the car
-                return;
-            }
-            GetInput();
-            HandleMotor();
-            HandleSteering();
-            UpdateWheelVisuals();
-            ApplyDownforce();
-            UprightCar();
-            TractionControl();
-            StabilizeCar();
-        // Anti-roll bar function
+        GetInput();
+        HandleMotor();
+        HandleSteering();
+        UpdateWheelVisuals();
+        ApplyDownforce();
+        UprightCar();
+        TractionControl();
+        StabilizeCar(); 
     }
     
 
-    // Get player inputs
+    
     private void GetInput()
     {
         Debug.Log("getting keys");
@@ -86,10 +77,10 @@ public class CarController : MonoBehaviour
         isBraking = Input.GetKey(KeyCode.Space);
     }
 
-    // Apply motor force to all four wheels and braking
+    
     private void HandleMotor()
     {
-        float slopeFactor = 1f + GetSlopeFactor(); // Increase torque on slopes
+        float slopeFactor = 1f + GetSlopeFactor(); 
 
         frontLeftWheelCollider.motorTorque = verticalInput * motorForce * slopeFactor;
         frontRightWheelCollider.motorTorque = verticalInput * motorForce * slopeFactor;
@@ -151,10 +142,10 @@ public class CarController : MonoBehaviour
     {
         WheelFrictionCurve forwardFriction = wheel.forwardFriction;
         forwardFriction.extremumSlip = 0.2f;
-        forwardFriction.extremumValue = 1f;
-        forwardFriction.asymptoteSlip = 0.5f;
-        forwardFriction.asymptoteValue = 0.75f;
-        forwardFriction.stiffness = 2f;
+        forwardFriction.extremumValue = 1.25f;
+        forwardFriction.asymptoteSlip = 0.3f;
+        forwardFriction.asymptoteValue = 1f;
+        forwardFriction.stiffness = 3f;
         wheel.forwardFriction = forwardFriction;
 
         WheelFrictionCurve sidewaysFriction = wheel.sidewaysFriction;

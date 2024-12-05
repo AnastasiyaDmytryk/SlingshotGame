@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MainL1 : MonoBehaviour
 {
     public PullString pullString;  // Reference to the PullString script
-    public CarController carController; // Reference to the CarController script
+    //public CarController carController; // Reference to the CarController script
     public Transform[] spawnPoints;  // Array of spawn points
     public TimeController timeController;
 
@@ -14,8 +14,8 @@ public class MainL1 : MonoBehaviour
 
     void Start()
     {
-        
-        pullString.Car.GetComponent<CarController>().enabled = false;// Disable car movement initially
+        //carController.enabled=false;
+        //carController.started = false; // Disable car movement initially
         timeController.enabled=false;
     }
 
@@ -36,25 +36,16 @@ public class MainL1 : MonoBehaviour
         {
             foreach(Transform spawn in spawnPoints)
             {
-                Debug.Log(spawnPoints.Length);
+                Debug.Log("destriyng spawns");
                 spawn.gameObject.SetActive(false);
-
                 
             }
-             spawnPoints=new Transform [1];
-
+            //carController.enabled=true;
             
-        }
-        if(spawnPoints.Length<=1)
-        {
-            //add car script
-            pullString.Car.GetComponent<CarController>().enabled = true;
-            // modify car weight and speed and force
-            pullString.Car.GetComponent<CarController>().motorForce=250;
-       
-            Debug.Log(carController.enabled);
+          
+           /* Debug.Log(carController.enabled);
             carController.started=true;
-            carController.isMovementAllowed = true;
+            carController.isMovementAllowed = true;*/
             pullString.rb.constraints = RigidbodyConstraints.None;
         }
        

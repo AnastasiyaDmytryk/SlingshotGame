@@ -31,7 +31,7 @@ public class LapCounter : MonoBehaviour
             laps.text = "Lap: " + lapNum +"/3";
         }
         if(collision.gameObject.tag == "pUp"){
-            points +=1;
+            points +=10;
             pointText.text = ("Points: " + points);
         }
 

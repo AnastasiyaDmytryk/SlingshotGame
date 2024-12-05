@@ -13,7 +13,7 @@ public class TimeController : MonoBehaviour
     public TextMeshProUGUI title;
     public TextMeshProUGUI countDown;
     public GameObject player;
-    public CarController carController;
+   // public CarController carController;
     public Transform[] spawnPoints;
     public bool timeComplete;
 
@@ -21,7 +21,7 @@ public class TimeController : MonoBehaviour
     void Start()
     {
         
-        carController.enabled=false;
+        //carController.enabled=false;
         timeComplete=false;
     }
 
@@ -61,8 +61,8 @@ public class TimeController : MonoBehaviour
             countDown.enabled = false;
             timeComplete=true;
             Debug.Log("timep completed");
-            carController.enabled = true;
-            carController.started = true;
+            //carController.enabled = true;
+            //carController.started = true;
             time.text = string.Format("{0:D2}:{1:D2}", minutes, seconds);
         }
 
