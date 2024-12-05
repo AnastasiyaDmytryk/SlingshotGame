@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class TimeController : MonoBehaviour
 {
-    
+
     public TextMeshProUGUI time;
     public TextMeshProUGUI title;
     public TextMeshProUGUI countDown;
@@ -15,7 +15,7 @@ public class TimeController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-                
+
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class TimeController : MonoBehaviour
     {
         Scene current = SceneManager.GetActiveScene();
         string sceneName = current.name;
-        
+
         if(sceneName == "levltown"){
             title.text = "Level 1";
         }else if(sceneName == "Level2"){
@@ -31,12 +31,12 @@ public class TimeController : MonoBehaviour
         }else if(sceneName == "Levl3"){
             title.text = "Level 3";
         }
-        
+
         /*float timeSinceLoad = Time.timeSinceLevelLoad -4;
         int minutes = (int)((timeSinceLoad % 3600) / 60);
         int seconds = (int)(timeSinceLoad % 60);*/
-        
-        if(seconds == -3){
+
+        /*if(seconds == -3){
             countDown.text = "3";
         }else if(seconds == -2){
             countDown.text = "2";
@@ -47,9 +47,9 @@ public class TimeController : MonoBehaviour
         }else if(seconds > 0){
             countDown.enabled = false;
             time.text = string.Format("{0:D2}:{1:D2}", minutes, seconds);
-        }
-        
+        }*/
+
     }
 
-    
+
 }
