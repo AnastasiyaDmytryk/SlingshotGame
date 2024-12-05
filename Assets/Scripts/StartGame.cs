@@ -20,11 +20,13 @@ public class StartGame : MonoBehaviour
     public void goToLevel2()
     {
         SceneManager.LoadScene("Level2");
+        Time.timeScale = 1f;
     }
 
     public void goToLevel3()
     {
         SceneManager.LoadScene("Levl3");
+        Time.timeScale = 1f;
     }
 
     // Update is called once per frame
