@@ -19,7 +19,7 @@ public class OpponentCarWaypoints : MonoBehaviour
     private Rigidbody rb;
     private NavMeshAgent agent;
 
-    private bool initialized = false; // Flag to check if initialization is complete
+    private bool initialized = false; 
 
     private void Awake()
     {
@@ -35,7 +35,7 @@ public class OpponentCarWaypoints : MonoBehaviour
 
     private IEnumerator Start()
     {
-        // Initialize agent
+        
         agent = GetComponent<NavMeshAgent>();
         if (agent == null)
         {
@@ -43,7 +43,7 @@ public class OpponentCarWaypoints : MonoBehaviour
             yield break;
         }
 
-        // Wait until the DynamicMarkerGenerator is available
+        
         DynamicMarkerGenerator markerGenerator = null;
         while (markerGenerator == null)
         {
@@ -53,16 +53,16 @@ public class OpponentCarWaypoints : MonoBehaviour
                 Debug.LogError("DynamicMarkerGenerator not found in the scene!");
                 yield break;
             }
-            yield return null; // Wait for the next frame
+            yield return null; 
         }
 
-        // Wait until the markers are generated
+       
         while (markerGenerator.generatedMarkers == null || markerGenerator.generatedMarkers.Count == 0)
         {
-            yield return null; // Wait for the next frame
+            yield return null; 
         }
 
-        // Assign the waypoints
+        
         waypoints = new List<Transform>(markerGenerator.generatedMarkers);
 
         if (waypoints == null || waypoints.Count == 0)
@@ -71,19 +71,19 @@ public class OpponentCarWaypoints : MonoBehaviour
             yield break;
         }
 
-        // Set the initial destination
+       
         opponentCar.LocateDestination(waypoints[currentWaypointIndex].position);
 
         Debug.Log("Waypoints successfully assigned in OpponentCarWaypoints for " + gameObject.name);
 
-        initialized = true; // Mark initialization as complete
+        initialized = true; 
     }
 
     private void Update()
     {
         if (!initialized) return;
 
-        // Check if waypoints list and agent are valid
+        
         if (waypoints == null || waypoints.Count == 0)
         {
             Debug.LogError("Waypoints list is null or empty in " + gameObject.name);
@@ -96,7 +96,7 @@ public class OpponentCarWaypoints : MonoBehaviour
             return;
         }
 
-        // Check if the agent has reached the current waypoint
+       
         if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
         {
             Debug.Log(gameObject.name + " reached waypoint " + currentWaypointIndex);

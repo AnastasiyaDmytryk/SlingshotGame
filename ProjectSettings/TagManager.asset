@@ -5,8 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - SpeedUp
-  - Fire
-  - racerAI
+  - Lap
+  - pUp
   - Marker
   layers:
   - Default

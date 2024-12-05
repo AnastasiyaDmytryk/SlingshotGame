@@ -3,34 +3,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.InputSystem; // Added for the New Input System
+using UnityEngine.InputSystem; 
 
 public class CarControllerFinal : MonoBehaviour
 {
     [Space(20)]
     [Space(10)]
     [Range(20, 190)]
-    public int maxSpeed = 90; // The maximum speed that the car can reach in km/h.
+    public int maxSpeed = 90; 
     [Range(10, 120)]
-    public int maxReverseSpeed = 45; // The maximum speed that the car can reach while going in reverse in km/h.
+    public int maxReverseSpeed = 45; 
     [Range(1, 10)]
-    public int accelerationMultiplier = 2; // How fast the car can accelerate.
+    public int accelerationMultiplier = 2; 
     [Space(10)]
     [Range(10, 45)]
-    public int maxSteeringAngle = 35; // Increased from 27 to 35 for sharper turns.
+    public int maxSteeringAngle = 35; 
     [Range(0.1f, 1f)]
-    public float steeringSpeed = 0.8f; // Increased from 0.5f to 0.8f for more responsive steering.
+    public float steeringSpeed = 0.8f; 
     [Space(10)]
     [Range(100, 600)]
-    public int brakeForce = 350; // The strength of the wheel brakes.
+    public int brakeForce = 350; 
     [Range(1, 10)]
-    public int decelerationMultiplier = 2; // How fast the car decelerates when the user is not using the throttle.
+    public int decelerationMultiplier = 2; 
     [Range(1, 10)]
-    public int handbrakeDriftMultiplier = 2; // Reduced from 5 to 2 to decrease drifting.
+    public int handbrakeDriftMultiplier = 2; 
     [Space(10)]
-    public Vector3 bodyMassCenter; // Center of mass of the car.
+    public Vector3 bodyMassCenter; 
 
-    // WHEELS
+    
     public GameObject frontLeftMesh;
     public WheelCollider frontLeftCollider;
     [Space(10)]
@@ -43,7 +43,7 @@ public class CarControllerFinal : MonoBehaviour
     public GameObject rearRightMesh;
     public WheelCollider rearRightCollider;
 
-    // PARTICLE SYSTEMS
+    
     [Space(20)]
     [Space(10)]
     public bool useEffects = false;
@@ -55,30 +55,30 @@ public class CarControllerFinal : MonoBehaviour
     public TrailRenderer RLWTireSkid;
     public TrailRenderer RRWTireSkid;
 
-    // SPEED TEXT (UI)
+    
     [Space(20)]
     [Space(10)]
     public bool useUI = false;
     public Text carSpeedText;
 
-    // SOUNDS
+    
     [Space(20)]
     [Space(10)]
     public bool useSounds = false;
 
-    // New AudioSources for different car states
+    
     [Space(10)]
     public AudioSource idleEngineSound;
     public AudioSource accelerationSound;
     public AudioSource brakingSound;
     public AudioSource driftingSound;
 
-    // INPUT SYSTEM
+    
     [Space(20)]
     [Space(10)]
-    public InputActionAsset inputActions; // Reference to the Input Action Asset
+    public InputActionAsset inputActions; 
 
-    // CAR DATA
+    
     [HideInInspector]
     public float carSpeed;
     [HideInInspector]
@@ -86,7 +86,7 @@ public class CarControllerFinal : MonoBehaviour
     [HideInInspector]
     public bool isTractionLocked;
 
-    // PRIVATE VARIABLES
+    
     Rigidbody carRigidbody;
     float steeringAxis;
     float throttleAxis;
@@ -103,7 +103,7 @@ public class CarControllerFinal : MonoBehaviour
     WheelFrictionCurve RRwheelFriction;
     float RRWextremumSlip;
 
-    // Input Actions
+    
     private InputAction steerAction;
     private InputAction accelerateAction;
     private InputAction brakeAction;
@@ -114,7 +114,7 @@ public class CarControllerFinal : MonoBehaviour
         carRigidbody = gameObject.GetComponent<Rigidbody>();
         carRigidbody.centerOfMass = bodyMassCenter;
 
-        // Initial setup for wheel friction curves
+        
         FLwheelFriction = new WheelFrictionCurve();
         FLwheelFriction.extremumSlip = frontLeftCollider.sidewaysFriction.extremumSlip;
         FLWextremumSlip = frontLeftCollider.sidewaysFriction.extremumSlip;
@@ -147,7 +147,7 @@ public class CarControllerFinal : MonoBehaviour
         RRwheelFriction.asymptoteValue = rearRightCollider.sidewaysFriction.asymptoteValue;
         RRwheelFriction.stiffness = rearRightCollider.sidewaysFriction.stiffness;
 
-        // Input System setup
+        
         var drivingMap = inputActions.FindActionMap("Driving");
 
         steerAction = drivingMap.FindAction("Steer");
@@ -174,7 +174,7 @@ public class CarControllerFinal : MonoBehaviour
 
     void Start()
     {
-        // Invoke methods for UI and sounds
+        
         if (useUI)
         {
             InvokeRepeating("CarSpeedUI", 0f, 0.1f);
@@ -204,41 +204,34 @@ public class CarControllerFinal : MonoBehaviour
 
     void Update()
     {
-        // CAR DATA
         carSpeed = (2 * Mathf.PI * frontLeftCollider.radius * frontLeftCollider.rpm * 60) / 1000;
         localVelocityX = transform.InverseTransformDirection(carRigidbody.velocity).x;
         localVelocityZ = transform.InverseTransformDirection(carRigidbody.velocity).z;
 
-        // INPUT HANDLING USING NEW INPUT SYSTEM
-        float steerInput = steerAction.ReadValue<float>();
-        steeringAxis = Mathf.Clamp(steerInput, -1f, 1f);
-
         // Steering
+        steeringAxis = Input.GetAxis("Horizontal");
         var steeringAngle = steeringAxis * maxSteeringAngle;
         frontLeftCollider.steerAngle = Mathf.Lerp(frontLeftCollider.steerAngle, steeringAngle, steeringSpeed);
         frontRightCollider.steerAngle = Mathf.Lerp(frontRightCollider.steerAngle, steeringAngle, steeringSpeed);
 
         // Acceleration
-        float accelerateInput = accelerateAction.ReadValue<float>();
-        if (accelerateInput > 0)
+        if (Input.GetKey(KeyCode.W))
         {
             CancelInvoke("DecelerateCar");
             deceleratingCar = false;
-            GoForward(accelerateInput);
+            GoForward(1f);
         }
 
-        // Braking (Reverse)
-        float brakeInput = brakeAction.ReadValue<float>();
-        if (brakeInput > 0)
+        // Braking/Reverse
+        if (Input.GetKey(KeyCode.S))
         {
             CancelInvoke("DecelerateCar");
             deceleratingCar = false;
-            GoReverse(brakeInput);
+            GoReverse(1f);
         }
 
         // Handbrake
-        float handbrakeInput = handbrakeAction.ReadValue<float>();
-        if (handbrakeInput > 0)
+        if (Input.GetKey(KeyCode.Space))
         {
             CancelInvoke("DecelerateCar");
             deceleratingCar = false;
@@ -249,14 +242,13 @@ public class CarControllerFinal : MonoBehaviour
             RecoverTraction();
         }
 
-        // Decelerate Car if No Input
-        if (accelerateInput == 0 && brakeInput == 0 && handbrakeInput == 0 && !deceleratingCar)
+        // Decelerate when no input is pressed
+        if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.Space) && !deceleratingCar)
         {
             InvokeRepeating("DecelerateCar", 0f, 0.1f);
             deceleratingCar = true;
         }
 
-        // Animate wheel meshes
         AnimateWheelMeshes();
     }
 
@@ -282,7 +274,7 @@ public class CarControllerFinal : MonoBehaviour
         {
             try
             {
-                // Idle Engine Sound
+                
                 if (Mathf.Abs(carSpeed) < 0.1f)
                 {
                     if (!idleEngineSound.isPlaying)
@@ -296,7 +288,7 @@ public class CarControllerFinal : MonoBehaviour
                     idleEngineSound.Stop();
                 }
 
-                // Acceleration Sound
+                
                 if (throttleAxis > 0 && carSpeed > 0.1f)
                 {
                     if (!accelerationSound.isPlaying)
@@ -309,7 +301,7 @@ public class CarControllerFinal : MonoBehaviour
                     accelerationSound.Stop();
                 }
 
-                // Braking Sound
+               
                 if (throttleAxis < 0 && carSpeed > 0.1f)
                 {
                     if (!brakingSound.isPlaying)
@@ -322,7 +314,7 @@ public class CarControllerFinal : MonoBehaviour
                     brakingSound.Stop();
                 }
 
-                // Drifting Sound
+                
                 if (isDrifting)
                 {
                     if (!driftingSound.isPlaying)
@@ -386,16 +378,12 @@ public class CarControllerFinal : MonoBehaviour
         }
     }
 
-    // STEERING METHODS
-
-    // The steering is now handled in the Update() method using the Input System.
-
-    // ENGINE AND BRAKING METHODS
+    
 
     public void GoForward(float input)
     {
-        // Adjust isDrifting logic
-        if (Mathf.Abs(localVelocityX) > 5f) // Increased threshold from 2.5f to 5f
+        
+        if (Mathf.Abs(localVelocityX) > 5f) 
         {
             isDrifting = true;
             DriftCarPS();
@@ -406,7 +394,7 @@ public class CarControllerFinal : MonoBehaviour
             DriftCarPS();
         }
 
-        // Smooth throttle axis
+       
         throttleAxis += input * Time.deltaTime * 3f;
         throttleAxis = Mathf.Clamp(throttleAxis, 0f, 1f);
 
@@ -429,8 +417,8 @@ public class CarControllerFinal : MonoBehaviour
 
     public void GoReverse(float input)
     {
-        // Adjust isDrifting logic
-        if (Mathf.Abs(localVelocityX) > 5f) // Increased threshold from 2.5f to 5f
+        
+        if (Mathf.Abs(localVelocityX) > 5f) 
         {
             isDrifting = true;
             DriftCarPS();
@@ -441,7 +429,7 @@ public class CarControllerFinal : MonoBehaviour
             DriftCarPS();
         }
 
-        // Smooth throttle axis
+        
         throttleAxis -= input * Time.deltaTime * 3f;
         throttleAxis = Mathf.Clamp(throttleAxis, -1f, 0f);
 
@@ -481,7 +469,7 @@ public class CarControllerFinal : MonoBehaviour
 
     public void DecelerateCar()
     {
-        if (Mathf.Abs(localVelocityX) > 5f) // Increased threshold from 2.5f to 5f
+        if (Mathf.Abs(localVelocityX) > 5f) 
         {
             isDrifting = true;
             DriftCarPS();
@@ -492,7 +480,7 @@ public class CarControllerFinal : MonoBehaviour
             DriftCarPS();
         }
 
-        // Reset throttle axis smoothly
+        
         if (throttleAxis != 0f)
         {
             if (throttleAxis > 0f)
@@ -529,11 +517,11 @@ public class CarControllerFinal : MonoBehaviour
     {
         CancelInvoke("RecoverTraction");
 
-        // Adjust driftingAxis
+        
         float driftingAxis = 1f;
 
-        // Adjust isDrifting logic
-        if (Mathf.Abs(localVelocityX) > 5f) // Increased threshold
+       
+        if (Mathf.Abs(localVelocityX) > 5f) 
         {
             isDrifting = true;
         }
@@ -542,8 +530,8 @@ public class CarControllerFinal : MonoBehaviour
             isDrifting = false;
         }
 
-        // Adjust friction curves to reduce drifting effect
-        float driftMultiplier = handbrakeDriftMultiplier * 0.5f; // Reduced effect by multiplying with 0.5f
+        
+        float driftMultiplier = handbrakeDriftMultiplier * 0.5f; 
 
         FLwheelFriction.extremumSlip = FLWextremumSlip * driftMultiplier * driftingAxis;
         frontLeftCollider.sidewaysFriction = FLwheelFriction;
@@ -611,7 +599,7 @@ public class CarControllerFinal : MonoBehaviour
     {
         isTractionLocked = false;
 
-        // Reset friction curves to original values
+       
         FLwheelFriction.extremumSlip = FLWextremumSlip;
         frontLeftCollider.sidewaysFriction = FLwheelFriction;
 

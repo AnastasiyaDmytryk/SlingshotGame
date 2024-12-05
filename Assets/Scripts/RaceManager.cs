@@ -14,10 +14,10 @@ public class RaceManager : MonoBehaviour
 
     private void UpdateRacerPositions()
     {
-        // Sort racers by progress to determine positions
+        
         racers.Sort((r1, r2) => r2.progress.CompareTo(r1.progress));
 
-        // Assign positions based on sorted list
+       
         for (int i = 0; i < racers.Count; i++)
         {
             racers[i].position = i + 1;
@@ -28,17 +28,17 @@ public class RaceManager : MonoBehaviour
     {
         foreach (var racer in racers)
         {
-            if (racer.position == 1) // Leading racer
+            if (racer.position == 1)
             {
-                racer.AdjustSpeed(0.95f);  // Slightly reduce speed
+                racer.AdjustSpeed(0.95f);  
             }
-            else if (racer.position == racers.Count) // Last place
+            else if (racer.position == racers.Count) 
             {
-                racer.AdjustSpeed(1.1f);  // Slight boost
+                racer.AdjustSpeed(1.1f);  
             }
             else
             {
-                racer.AdjustSpeed(1.0f);  // Normal speed
+                racer.AdjustSpeed(1.0f);  
             }
         }
     }

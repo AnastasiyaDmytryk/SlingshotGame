@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class CarController : MonoBehaviour
 {
-    // Public variables for tuning
+    
     public float motorForce = 1000f;
-    public float maxSteeringAngle = 15f;   // Reduced for better control
+    public float maxSteeringAngle = 15f;   
     public float brakeForce = 3000f;
-    public float downforce = 75f;          // Increased for stability
+    public float downforce = 75f;          
 
     public WheelCollider frontLeftWheelCollider;
     public WheelCollider frontRightWheelCollider;
@@ -37,15 +37,15 @@ public class CarController : MonoBehaviour
             UnityEngine.Debug.LogError("Rigidbody component missing! Please add a Rigidbody to your car object.");
         }
 
-        // Adjust the center of mass
-        rb.centerOfMass = new Vector3(0, -0.25f, 0); // Adjusted for better balance
+       
+        rb.centerOfMass = new Vector3(0, -0.25f, 0);
 
-        // Set Rigidbody mass and drag
+        
         rb.mass = 2000f;
-        rb.drag = 0.2f;          // Increased for more stability
-        rb.angularDrag = 7f;     // Increased to reduce spinning out
+        rb.drag = 0.2f;          
+        rb.angularDrag = 7f;     
 
-        // Adjust wheel friction and suspension settings
+       
         AdjustWheel(frontLeftWheelCollider);
         AdjustWheel(frontRightWheelCollider);
         AdjustWheel(rearLeftWheelCollider);
@@ -61,10 +61,10 @@ public class CarController : MonoBehaviour
         ApplyDownforce();
         UprightCar();
         TractionControl();
-        StabilizeCar(); // Anti-roll bar function
+        StabilizeCar(); 
     }
 
-    // Get player inputs
+    
     private void GetInput()
     {
         horizontalInput = Input.GetAxis("Horizontal");
@@ -72,10 +72,10 @@ public class CarController : MonoBehaviour
         isBraking = Input.GetKey(KeyCode.Space);
     }
 
-    // Apply motor force to all four wheels and braking
+    
     private void HandleMotor()
     {
-        float slopeFactor = 1f + GetSlopeFactor(); // Increase torque on slopes
+        float slopeFactor = 1f + GetSlopeFactor(); 
 
         frontLeftWheelCollider.motorTorque = verticalInput * motorForce * slopeFactor;
         frontRightWheelCollider.motorTorque = verticalInput * motorForce * slopeFactor;
