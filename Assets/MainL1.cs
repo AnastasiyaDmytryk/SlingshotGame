@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class MainL1 : MonoBehaviour
 {
@@ -9,13 +10,17 @@ public class MainL1 : MonoBehaviour
     public CarController carController; // Reference to the CarController script
     public Transform[] spawnPoints;  // Array of spawn points
     public Text countdownText;  // UI Text for countdown
+    bool timerActive = false; 
+    float currentTime;
+    public Text currentTimeText;
 
     private bool countdownComplete = false;
-    public bool carMoved = false;
+    private bool carMoved = false;
 
     void Start()
     {
         carController.enabled = false; // Disable car movement initially
+        currentTime = 0;
     }
 
     void Update()
@@ -26,9 +31,23 @@ public class MainL1 : MonoBehaviour
             MoveCarToSpawnPoint();
             pullString.isLaunched = false;
             Destroy(pullString.gameObject);
+            StopTimer();
         }
 
+        //timer 
+        if(timerActive == true){
+            currentTime = currentTime + timerActive.deltaTime;
+        }
+        TimeSpan time = TimeSpan.FromSeconds(currentTime);
+        currentTimeText.text = time.Minutes.ToString() + ":" + time.Seconds.ToString();
        
+    }
+
+    public void StartTimer(){
+        timerActive = true;
+    }
+    public void StopTimer(){
+        timerActive = false;
     }
 
     void MoveCarToSpawnPoint()
@@ -40,7 +59,7 @@ public class MainL1 : MonoBehaviour
         Transform selectedSpawnPoint = spawnPoints[spawnIndex];
         pullString.Car.transform.position = selectedSpawnPoint.position;
         carController.enabled = true;
-        
+        StartTimer();
     }
 
   
