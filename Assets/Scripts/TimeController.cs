@@ -32,9 +32,9 @@ public class TimeController : MonoBehaviour
             title.text = "Level 3";
         }
         
-        float timeSinceLoad = Time.timeSinceLevelLoad -4;
+        /*float timeSinceLoad = Time.timeSinceLevelLoad -4;
         int minutes = (int)((timeSinceLoad % 3600) / 60);
-        int seconds = (int)(timeSinceLoad % 60);
+        int seconds = (int)(timeSinceLoad % 60);*/
         
         if(seconds == -3){
             countDown.text = "3";

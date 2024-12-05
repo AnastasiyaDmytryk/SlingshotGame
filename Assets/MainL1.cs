@@ -40,12 +40,25 @@ public class MainL1 : MonoBehaviour
             currentTime = currentTime + timerActive.deltaTime;
         }
         TimeSpan time = TimeSpan.FromSeconds(currentTime);
-        currentTimeText.text = string.Format("{0:D2}:{1:D2}", time.Minutes.ToString(), time.Seconds.ToString());
+        //currentTimeText.text = string.Format("{0:D2}:{1:D2}", time.Minutes.ToString(), time.Seconds.ToString());
+        
        
     }
 
     public void StartTimer(){
         timerActive = true;
+        if(Seconds == 0){
+            countDown.text = "3";
+        }else if(Seconds == 1){
+            countDown.text = "2";
+        }else if(Seconds == 2){
+            countDown.text = "1";
+        }else if(Seconds == 3){
+            countDown.text = "Go!";
+        }else if(Seconds > 3){
+            countDown.enabled = false;
+            time.text = string.Format("{0:D2}:{1:D2}", minutes, seconds);
+        }
     }
     public void StopTimer(){
         timerActive = false;
