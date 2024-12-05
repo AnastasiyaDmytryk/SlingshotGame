@@ -62,7 +62,7 @@ public class TimeController : MonoBehaviour
         TimeSpan timeT = TimeSpan.FromSeconds(currentTimeCountDown);
 
         if(timerActive == true){
-            countDown.enabled = false;
+            countDown.enabled = true;
             
             currentTimeCountDown = currentTimeCountDown - Time.deltaTime;
             if(currentTimeCountDown == 4){
