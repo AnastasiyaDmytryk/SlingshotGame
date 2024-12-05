@@ -8,9 +8,8 @@ public class MainL1 : MonoBehaviour
     public PullString pullString;  // Reference to the PullString script
     public CarController carController; // Reference to the CarController script
     public Transform[] spawnPoints;  // Array of spawn points
-    public Text countdownText;  // UI Text for countdown
+   
 
-    private bool countdownComplete = false;
     public bool carMoved = false;
 
     void Start()
