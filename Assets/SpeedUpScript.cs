@@ -6,7 +6,7 @@ public class SpeedUpScript : MonoBehaviour
 {
     void onTrigerEnter(Collider other)
     {
-
+        Debug.Log("Entered");
     }
     void Start()
     {
