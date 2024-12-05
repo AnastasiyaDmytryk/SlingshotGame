@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using System;
 
 public class MainL1 : MonoBehaviour
@@ -12,7 +13,7 @@ public class MainL1 : MonoBehaviour
     public Text countdownText;  // UI Text for countdown
     bool timerActive = false; 
     float currentTime;
-    public Text currentTimeText;
+    public TextMeshProUGUI currentTimeText;
 
     private bool countdownComplete = false;
     private bool carMoved = false;
@@ -39,7 +40,7 @@ public class MainL1 : MonoBehaviour
             currentTime = currentTime + timerActive.deltaTime;
         }
         TimeSpan time = TimeSpan.FromSeconds(currentTime);
-        currentTimeText.text = time.Minutes.ToString() + ":" + time.Seconds.ToString();
+        currentTimeText.text = string.Format("{0:D2}:{1:D2}", time.Minutes.ToString(), time.Seconds.ToString());
        
     }
 
