@@ -13,7 +13,7 @@ public class PullString : MonoBehaviour
     public bool move;
     public GameObject Carprefab;
     public GameObject Car;
-    Rigidbody rb;
+    public Rigidbody rb;
     public bool isLaunched;
 
     Camera carCamera; // Reference to the car's camera

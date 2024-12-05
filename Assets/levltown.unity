@@ -24450,7 +24450,7 @@ MonoBehaviour:
   - {fileID: 987444568}
   - {fileID: 1800353170}
   - {fileID: 120640684}
-  countdownText: {fileID: 0}
+  timeController: {fileID: 666752299827669642}
   carMoved: 0
 --- !u!4 &1196743907
 Transform:
@@ -49590,6 +49590,7 @@ MonoBehaviour:
   title: {fileID: 3291813254122850754}
   countDown: {fileID: 1207995294}
   player: {fileID: 0}
+  carController: {fileID: 3720089001156700855, guid: 1e7239f3ee5b9104491fd74cb4c4683b, type: 3}
 --- !u!222 &826360279233979104
 CanvasRenderer:
   m_ObjectHideFlags: 0
