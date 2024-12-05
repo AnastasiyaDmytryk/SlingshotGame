@@ -11,7 +11,7 @@ public class MainL1 : MonoBehaviour
     public Text countdownText;  // UI Text for countdown
 
     private bool countdownComplete = false;
-    private bool carMoved = false;
+    public bool carMoved = false;
 
     void Start()
     {
