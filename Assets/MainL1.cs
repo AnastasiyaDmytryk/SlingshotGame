@@ -14,8 +14,8 @@ public class MainL1 : MonoBehaviour
 
     void Start()
     {
-        carController.enabled=false;
-        carController.started = false; // Disable car movement initially
+        
+        pullString.Car.GetComponent<CarController>().enabled = false;// Disable car movement initially
         timeController.enabled=false;
     }
 
@@ -36,13 +36,22 @@ public class MainL1 : MonoBehaviour
         {
             foreach(Transform spawn in spawnPoints)
             {
-                Debug.Log("destriyng spawns");
+                Debug.Log(spawnPoints.Length);
                 spawn.gameObject.SetActive(false);
+
                 
             }
-            carController.enabled=true;
+             spawnPoints=new Transform [1];
+
             
-          
+        }
+        if(spawnPoints.Length<=1)
+        {
+            //add car script
+            pullString.Car.GetComponent<CarController>().enabled = true;
+            // modify car weight and speed and force
+            pullString.Car.GetComponent<CarController>().motorForce=250;
+       
             Debug.Log(carController.enabled);
             carController.started=true;
             carController.isMovementAllowed = true;

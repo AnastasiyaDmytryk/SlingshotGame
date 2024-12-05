@@ -187,8 +187,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e307243a11bd77247aa3e2a864cf5cfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMovementAllowed: 0
-  motorForce: 1500
+  isMovementAllowed: 1
+  motorForce: 250
   maxSteeringAngle: 30
   brakeForce: 3000
   downforce: 75
@@ -200,6 +200,7 @@ MonoBehaviour:
   frontRightWheelVisual: {fileID: 6333383176770468022}
   rearLeftWheelVisual: {fileID: 5597364067428149600}
   rearRightWheelVisual: {fileID: 6702389479772296309}
+  started: 1
 --- !u!1 &6333383176770468022 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6737209909912501207, guid: 62010132604e8c94d96b4cb4fe6d3394, type: 3}
