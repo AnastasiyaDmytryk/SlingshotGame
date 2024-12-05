@@ -51,10 +51,8 @@ public class PullString : MonoBehaviour
 {
     if (ol.performed)
     {
-        // Check if Camera.main is null
-       
-       
-        Vector3 temp = Mouse.current?.position.ReadValue() ?? Vector3.zero; // Fallback if Mouse.current is null
+        Debug.Log("pointing");
+        Vector3 temp = Mouse.current?.position.ReadValue() ?? Vector3.zero;
         if (temp == Vector3.zero)
         {
             Debug.LogError("Mouse position is unavailable. Check Input System configuration.");
@@ -64,15 +62,17 @@ public class PullString : MonoBehaviour
         Ray ray = slingshotCamera.ScreenPointToRay(temp);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit)) // Ensure raycast hit
+        if (Physics.Raycast(ray, out hit))
         {
-            currentMouseWorldPosition = new Vector3(hit.point.x, 1, hit.point.z);
-            Debug.Log(currentMouseWorldPosition);
+            currentMouseWorldPosition = new Vector3(hit.point.x, hit.point.y, hit.point.z);
+            Debug.Log($"Hit Point: {currentMouseWorldPosition}");
         }
         else
         {
-            Debug.LogWarning("Raycast did not hit any object.");
+            Debug.LogWarning("Raycast did not hit any object. Check colliders or camera setup.");
         }
+
+        Debug.DrawRay(ray.origin, ray.direction * 100f, Color.green, 2f);
     }
 }
 
@@ -81,6 +81,7 @@ public class PullString : MonoBehaviour
     {
         if (cl.started)
         {
+            Debug.Log("clicked");
              launch();
         }
         
@@ -92,7 +93,7 @@ public class PullString : MonoBehaviour
         Vector3 launchDirection = initialCenterPoint - CenterPoint.position;
         float launchForce = launchDirection.magnitude * 10f; // Adjust multiplier as needed
 
-       isLaunched=true;
+        isLaunched=true;
 
         // Switch cameras
         if (slingshotCamera != null)
@@ -107,8 +108,6 @@ public class PullString : MonoBehaviour
 
     void Update()
     {
-  
-            
             Vector3 direction = (currentMouseWorldPosition);
             float step = 3f * Time.deltaTime;
             CenterPoint.transform.position = direction * step;

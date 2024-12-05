@@ -39,8 +39,8 @@ public class MainL1 : MonoBehaviour
         // Move the car to the selected spawn point
         Transform selectedSpawnPoint = spawnPoints[spawnIndex];
         pullString.Car.transform.position = selectedSpawnPoint.position;
-        carController.enabled = true;
-        
+        carMoved=true;
+       
     }
 
   
