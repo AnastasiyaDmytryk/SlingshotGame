@@ -4,18 +4,12 @@ using UnityEngine;
 
 public class SpeedUpScript : MonoBehaviour
 {
-    void onTrigerEnter(Collider other)
+    public int boostMultiplier = 20; // Factor by which to increase speed
+    public int boostDuration = 5;  // Duration of the speed boost
+    public CarControllerFinal carController;
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Entered");
-    }
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+            StartCoroutine(carController.SpeedBoost(boostMultiplier, boostDuration));
         
     }
 }

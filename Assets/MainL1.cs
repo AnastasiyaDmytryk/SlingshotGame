@@ -42,7 +42,7 @@ public class MainL1 : MonoBehaviour
         {
             foreach(Transform spawn in spawnPoints)
             {
-                Debug.Log("destriyng spawns");
+                //Debug.Log("destriyng spawns");
                 spawn.gameObject.SetActive(false);
                 
             }
@@ -81,7 +81,7 @@ public class MainL1 : MonoBehaviour
             int spawnIndex = Random.Range(0, spawnPoints.Length-1);
             if(spawnIndexes[spawnIndex]!=0)
             {
-                Debug.Log(spawnIndexes[spawnIndex]);
+                //Debug.Log(spawnIndexes[spawnIndex]);
                 Transform selectedSpawnPoint = spawnPoints[spawnIndex];
                 AIDrivers[numOfCars]=Instantiate(AIDriversPrefabs[numOfCars]);
                 AIRb[numOfCars] = AIDrivers[numOfCars].GetComponent<Rigidbody>();
