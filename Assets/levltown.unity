@@ -3768,7 +3768,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: -1
@@ -44739,8 +44739,6 @@ MonoBehaviour:
   time: {fileID: 2576526846363412486}
   title: {fileID: 3291813254122850754}
   countDown: {fileID: 1207995294}
-  player: {fileID: 0}
-  spawnPoints: []
   timeComplete: 0
   startTime: 4
 --- !u!222 &826360279233979104

@@ -17,7 +17,7 @@ public class MainL1 : MonoBehaviour
         //carController.enabled=false;
         //carController.started = false; // Disable car movement initially
         timeController = GetComponent<TimeController> ();
-        timeController.enabled=false;
+        timeController.enabled= true;
     }
 
     void Update()
@@ -27,8 +27,9 @@ public class MainL1 : MonoBehaviour
         {
             MoveCarToSpawnPoint();
             pullString.isLaunched = false;
-            Destroy(pullString.gameObject);           
-            
+            Destroy(pullString.gameObject); 
+            timeController.enabled=true;          
+            Debug.Log("click");
         }
        
         if(timeController.timeComplete && spawnPoints.Length>0)
@@ -60,9 +61,7 @@ public class MainL1 : MonoBehaviour
         // Move the car to the selected spawn point
         Transform selectedSpawnPoint = spawnPoints[spawnIndex];
         pullString.Car.transform.position = selectedSpawnPoint.position;
-        carMoved=true;
-        timeController.enabled=true;
-         
+        carMoved=true;        
        
     }
 

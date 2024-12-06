@@ -112,6 +112,7 @@ public class PullString : MonoBehaviour
         float launchForce = launchDirection.magnitude * 10f; // Adjust multiplier as needed
 
         isLaunched=true;
+        Debug.Log("click");
 
         // Switch cameras
         if (slingshotCamera != null)

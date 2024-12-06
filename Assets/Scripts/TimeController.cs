@@ -13,9 +13,6 @@ public class TimeController : MonoBehaviour
     public TextMeshProUGUI time;
     public TextMeshProUGUI title;
     public TextMeshProUGUI countDown;
-    public GameObject player;
-   // public CarController carController;
-    public Transform[] spawnPoints;
     public bool timeComplete;
 
     //TIMERCLOCKTHING
@@ -23,7 +20,7 @@ public class TimeController : MonoBehaviour
     float currentTimeClock;
 
     //TIMERFORCOUNTDOWN
-    bool timerActive = false;
+    public bool timerActive = false;
     public int startTime;
     float currentTimeCountDown;
     
