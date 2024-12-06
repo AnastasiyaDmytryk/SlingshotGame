@@ -4007,11 +4007,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8251216798195045036}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 062ed86 (save)
     - target: {fileID: 3624361127040454839, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+>>>>>>> parent of 062ed86 (save)
+=======
 >>>>>>> parent of 062ed86 (save)
     - target: {fileID: 4039730458005871468, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
       propertyPath: m_Constraints
@@ -4058,6 +4064,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
     - target: {fileID: 5344064838395278154, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
       propertyPath: laps
       value: 
@@ -4070,6 +4077,8 @@ PrefabInstance:
       propertyPath: Leaderboard
       value: 
       objectReference: {fileID: 8861963680544251472}
+=======
+>>>>>>> parent of 062ed86 (save)
 =======
 >>>>>>> parent of 062ed86 (save)
     - target: {fileID: 8706736200202057924, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
@@ -26292,8 +26301,13 @@ MonoBehaviour:
   currentMouseWorldPosition: {x: 0, y: 0, z: 0}
   move: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   Carprefab: {fileID: 1057577269}
   Car: {fileID: 1057577269}
+=======
+  Carprefab: {fileID: 8706736200009698823}
+  Car: {fileID: 8706736200009698823}
+>>>>>>> parent of 062ed86 (save)
 =======
   Carprefab: {fileID: 8706736200009698823}
   Car: {fileID: 8706736200009698823}
@@ -55050,9 +55064,12 @@ SceneRoots:
   - {fileID: 49449096}
   - {fileID: 1196743907}
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 1140903474}
   - {fileID: 210712259}
 =======
+=======
+>>>>>>> parent of 062ed86 (save)
   - {fileID: 1557013945}
   - {fileID: 1140903474}
   - {fileID: 210712259}
