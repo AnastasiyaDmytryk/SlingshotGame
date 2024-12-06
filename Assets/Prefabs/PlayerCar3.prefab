@@ -5578,7 +5578,7 @@ MonoBehaviour:
   carTransform: {fileID: 4068578628773583000}
   followSpeed: 7.94
   lookSpeed: 3.1
-  offset: {x: 1, y: 1, z: -3.5}
+  offset: {x: 0.03, y: 0.77, z: -1.41}
 --- !u!1 &7708203299672332266
 GameObject:
   m_ObjectHideFlags: 0
@@ -10961,6 +10961,7 @@ MonoBehaviour:
   halfMapObject: {fileID: 0}
   startobj: {fileID: 0}
   finishobj: {fileID: 0}
+  lapActive: 1
   lapNum: 0
   points: 0
 --- !u!114 &1504379003922668673
