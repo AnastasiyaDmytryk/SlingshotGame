@@ -10794,7 +10794,7 @@ GameObject:
   - component: {fileID: 4039730458005871468}
   - component: {fileID: 3624361127040454839}
   - component: {fileID: 3663848771287972167}
-  - component: {fileID: 5344064838395278154}
+  - component: {fileID: 333870388005985793}
   m_Layer: 0
   m_Name: PlayerCar3
   m_TagString: Untagged
@@ -10941,7 +10941,7 @@ MonoBehaviour:
   carSpeed: 0
   isDrifting: 0
   isTractionLocked: 0
---- !u!114 &5344064838395278154
+--- !u!114 &333870388005985793
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -26,7 +26,6 @@ public class TimeController : MonoBehaviour
     bool timerActive = false;
     public int startTime;
     float currentTimeCountDown;
-    
 
 
     // Start is called before the first frame update
@@ -98,7 +97,6 @@ public class TimeController : MonoBehaviour
     public void StartTimer(){
         timerActive = true;
     }
-    
 
 
 }
