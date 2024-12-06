@@ -16,8 +16,7 @@ public class MainL1 : MonoBehaviour
     {
         //carController.enabled=false;
         //carController.started = false; // Disable car movement initially
-        timeController = GetComponent<TimeController> ();
-        timeController.enabled= true;
+        timeController.enabled= false;
     }
 
     void Update()
@@ -37,8 +36,7 @@ public class MainL1 : MonoBehaviour
             foreach(Transform spawn in spawnPoints)
             {
                 Debug.Log("destriyng spawns");
-                spawn.gameObject.SetActive(false);
-                
+                spawn.gameObject.SetActive(false);                
             }
             //carController.enabled=true;
             

@@ -60,7 +60,7 @@ public class TimeController : MonoBehaviour
         TimeSpan timeT = TimeSpan.FromSeconds(currentTimeCountDown);
 
         if(timerActive == true){
-            countDown.enabled = true;
+            //countDown.enabled = true;
             Debug.Log("countdown start");
             currentTimeCountDown = currentTimeCountDown - Time.deltaTime;
             if(currentTimeCountDown == 4){
@@ -69,7 +69,7 @@ public class TimeController : MonoBehaviour
                 countDown.text = "2";
             }else if(currentTimeCountDown == 2){
                 countDown.text = "1";
-            }else if(currentTimeCountDown == 0){
+            }else if(currentTimeCountDown == 1){
                 countDown.text = "Go!";
             }else if(currentTimeCountDown <= 0){
                 timerActive = false;
@@ -77,7 +77,7 @@ public class TimeController : MonoBehaviour
         }
 
         if(timerActive == false){
-            countDown.enabled = false;
+            //countDown.enabled = false;
             timeComplete=true;
             StartClock();
             Debug.Log("countdown done, clock started");
