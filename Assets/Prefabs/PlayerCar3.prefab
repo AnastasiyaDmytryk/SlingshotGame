@@ -10813,7 +10813,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.0058349133, y: -0.6969095, z: -0.01145035, w: 0.71704406}
   m_LocalPosition: {x: 8.168998, y: 0.1999135, z: 5.6647367}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6850405152794990933}
@@ -10856,12 +10856,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8706736200202057924}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0fefceefe666bb4682b272ec8c5bdd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 135
+  maxSpeed: 67
   maxReverseSpeed: 25
   accelerationMultiplier: 3
   maxSteeringAngle: 15
@@ -10904,7 +10904,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8706736200202057924}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71d905985df2a564e9f8fc6778712bb2, type: 3}
   m_Name: 
