@@ -4047,6 +4047,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5344064838395278154, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
+      propertyPath: laps
+      value: 
+      objectReference: {fileID: 6097925232965746996}
+    - target: {fileID: 5344064838395278154, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
+      propertyPath: pointText
+      value: 
+      objectReference: {fileID: 6741086176031274778}
+    - target: {fileID: 5344064838395278154, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
+      propertyPath: Leaderboard
+      value: 
+      objectReference: {fileID: 8861963680544251472}
     - target: {fileID: 8706736200202057924, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
       propertyPath: m_Name
       value: PlayerCarTown
@@ -49990,6 +50002,7 @@ MonoBehaviour:
   player: {fileID: 0}
   spawnPoints: []
   timeComplete: 0
+  startTime: 0
 --- !u!222 &826360279233979104
 CanvasRenderer:
   m_ObjectHideFlags: 0
