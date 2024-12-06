@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 62287343252885609}
   m_Layer: 0
   m_Name: LapColl
-  m_TagString: Lap
+  m_TagString: halfway
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2267158293786633983}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.16791607, z: -0, w: 0.98580134}
+  m_LocalRotation: {x: 0, y: 0.16791302, z: 0, w: 0.9858018}
   m_LocalPosition: {x: 21.437754, y: 0.67, z: 3.9099994}
   m_LocalScale: {x: 0.39864, y: 1, z: 2.8429}
   m_ConstrainProportionsScale: 0

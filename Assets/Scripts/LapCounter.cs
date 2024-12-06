@@ -7,18 +7,24 @@ public class LapCounter : MonoBehaviour
 {
     public TextMeshProUGUI laps;
     public TextMeshProUGUI pointText;
-    public GameObject Leaderboard, lapObject, halfMapObject;
+    public GameObject Leaderboard, lapObject, halfMapObject, startobj, finishobj;
+    public bool lapActive = true;
     public int lapNum = 0;
     public int points = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
+        startobj.SetActive(true);
+        finishobj.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(lapNum == 2 && lapActive){
+            startobj.SetActive(false);
+            finishobj.SetActive(true);
+        }
         if(lapNum == 3){
             Time.timeScale = 0f;
             Leaderboard.SetActive(true);
@@ -29,6 +35,7 @@ public class LapCounter : MonoBehaviour
         if(collision.gameObject.tag == "Lap"){
             lapNum += 1;
             lapObject.SetActive(false);
+            lapActive = false;
             laps.text = "Lap: " + lapNum +"/3";
         }
         if(collision.gameObject.tag == "pUp"){
@@ -36,7 +43,8 @@ public class LapCounter : MonoBehaviour
             pointText.text = ("Points: " + points);
         }
         if(collision.gameObject.tag == "halfway"){            
-            lapObject.SetActive(true);            
+            lapObject.SetActive(true);  
+            lapActive = true;          
         }
 
     }

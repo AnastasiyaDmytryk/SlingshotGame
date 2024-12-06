@@ -2338,15 +2338,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4068578628773583000, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.55
+      value: 8.871
       objectReference: {fileID: 0}
     - target: {fileID: 4068578628773583000, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.406
+      value: 1.116
       objectReference: {fileID: 0}
     - target: {fileID: 4068578628773583000, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.05
+      value: -11.285
       objectReference: {fileID: 0}
     - target: {fileID: 4068578628773583000, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
       propertyPath: m_LocalRotation.w
@@ -23748,6 +23748,7 @@ MonoBehaviour:
   player: {fileID: 0}
   spawnPoints: []
   timeComplete: 0
+  startTime: 0
 --- !u!114 &8004756915680474767
 MonoBehaviour:
   m_ObjectHideFlags: 0

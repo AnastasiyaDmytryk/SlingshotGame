@@ -5497,13 +5497,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7377245100567652373}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13082385, y: -0.13891947, z: 0.029448636, w: 0.9811826}
-  m_LocalPosition: {x: 4.000006, y: 3.9999995, z: -14.000015}
+  m_LocalRotation: {x: 0.13025063, y: 0.013952402, z: 0.010642187, w: 0.99132586}
+  m_LocalPosition: {x: 0.35, y: 3.86, z: -7.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4068578628773583000}
-  m_LocalEulerAnglesHint: {x: 12.889, y: 41.512, z: 3.331}
+  m_LocalEulerAnglesHint: {x: 14.948, y: 1.805, z: 1.467}
 --- !u!20 &81659977823084192
 Camera:
   m_ObjectHideFlags: 0
@@ -10795,6 +10795,7 @@ GameObject:
   - component: {fileID: 3624361127040454839}
   - component: {fileID: 3663848771287972167}
   - component: {fileID: 5344064838395278154}
+  - component: {fileID: 1504379003922668673}
   m_Layer: 0
   m_Name: PlayerCar3
   m_TagString: Untagged
@@ -10810,9 +10811,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8706736200202057924}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0058362153, y: 0.6969094, z: 0.011448008, w: -0.71704406}
+  m_LocalRotation: {x: 0.0058349133, y: -0.6969095, z: -0.01145035, w: 0.71704406}
   m_LocalPosition: {x: 8.168998, y: 0.1999135, z: 5.6647367}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6850405152794990933}
@@ -10820,7 +10821,7 @@ Transform:
   - {fileID: 9099587061306615291}
   - {fileID: 2912728746912259657}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.435, y: -88.363, z: -1.407}
 --- !u!54 &4039730458005871468
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10956,8 +10957,25 @@ MonoBehaviour:
   laps: {fileID: 0}
   pointText: {fileID: 0}
   Leaderboard: {fileID: 0}
+  lapObject: {fileID: 0}
+  halfMapObject: {fileID: 0}
+  startobj: {fileID: 0}
+  finishobj: {fileID: 0}
   lapNum: 0
   points: 0
+--- !u!114 &1504379003922668673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8706736200202057924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f677cca03e700a948ad3566060fc1692, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
 --- !u!1 &8884344995149468101
 GameObject:
   m_ObjectHideFlags: 0
