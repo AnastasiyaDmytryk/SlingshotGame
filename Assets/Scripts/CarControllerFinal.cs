@@ -612,6 +612,28 @@ public class CarControllerFinal : MonoBehaviour
         RRwheelFriction.extremumSlip = RRWextremumSlip;
         rearRightCollider.sidewaysFriction = RRwheelFriction;
     }
+    private bool isBoosted = false; 
+
+    public IEnumerator SpeedBoost(int multiplier, int duration)
+    {
+        
+        isBoosted = true;
+        Debug.Log("speeding");
+        int originalMaxSpeed = maxSpeed;
+        int originalAcceleration=accelerationMultiplier;
+
+        maxSpeed = Mathf.RoundToInt(maxSpeed * multiplier); 
+        accelerationMultiplier=Mathf.RoundToInt(accelerationMultiplier * multiplier);
+        Debug.Log(maxSpeed);
+        Debug.Log("accs"+accelerationMultiplier);
+        yield return new WaitForSeconds(duration); 
+        maxSpeed = originalMaxSpeed; 
+
+        accelerationMultiplier=originalAcceleration;
+
+        isBoosted = false;
+    }
+
 
     void AnimateWheelMeshes()
     {
