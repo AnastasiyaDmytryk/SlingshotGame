@@ -86,6 +86,7 @@ public class MainL1 : MonoBehaviour
                 AIDrivers[numOfCars]=Instantiate(AIDriversPrefabs[numOfCars]);
                 AIRb[numOfCars] = AIDrivers[numOfCars].GetComponent<Rigidbody>();
                 AIDrivers[numOfCars].transform.position=selectedSpawnPoint.position;
+                AIDrivers[numOfCars].transform.localScale = Vector3.one * 0.15f;
                 
                 numOfCars+=1;
                 spawnIndexes[spawnIndex]=0;
