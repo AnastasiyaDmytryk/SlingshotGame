@@ -9,16 +9,11 @@ public class MainL1 : MonoBehaviour
     //public CarController carController; // Reference to the CarController script
     public Transform[] spawnPoints;  // Array of spawn points
     public TimeController timeController;
-    public int[] spawnIndexes={6,1,2,3,4};
-    public GameObject[] AIDriversPrefabs;
-    public GameObject[] AIDrivers;
-    public Rigidbody[] AIRb;
 
     public bool carMoved = false;
 
     void Start()
     {
-        
         //carController.enabled=false;
         //carController.started = false; // Disable car movement initially
         timeController = GetComponent<TimeController> ();
@@ -34,7 +29,6 @@ public class MainL1 : MonoBehaviour
             MoveCarToSpawnPoint();
             pullString.isLaunched = false;
             Destroy(pullString.gameObject);
-            MoveAICars();
             
             
         }
@@ -43,7 +37,7 @@ public class MainL1 : MonoBehaviour
         {
             foreach(Transform spawn in spawnPoints)
             {
-                //Debug.Log("destriyng spawns");
+                Debug.Log("destriyng spawns");
                 spawn.gameObject.SetActive(false);
                 
             }
@@ -63,8 +57,7 @@ public class MainL1 : MonoBehaviour
     void MoveCarToSpawnPoint()
     {
         // Calculate a random spawn point index
-        int spawnIndex = Random.Range(0, spawnPoints.Length-1);
-        spawnIndexes[spawnIndex]=0;
+        int spawnIndex = Random.Range(0, spawnPoints.Length);
 
         // Move the car to the selected spawn point
         Transform selectedSpawnPoint = spawnPoints[spawnIndex];
@@ -73,31 +66,6 @@ public class MainL1 : MonoBehaviour
         timeController.enabled=true;
          
        
-    }
-    void MoveAICars()
-    {
-        int numOfCars=0;
-        while(numOfCars<3)
-        {
-            int spawnIndex = Random.Range(0, spawnPoints.Length-1);
-            if(spawnIndexes[spawnIndex]!=0)
-            {
-                //Debug.Log(spawnIndexes[spawnIndex]);
-                Transform selectedSpawnPoint = spawnPoints[spawnIndex];
-                AIDrivers[numOfCars]=Instantiate(AIDriversPrefabs[numOfCars]);
-                AIRb[numOfCars] = AIDrivers[numOfCars].GetComponent<Rigidbody>();
-                AIDrivers[numOfCars].transform.position=selectedSpawnPoint.position;
-                
-                numOfCars+=1;
-                spawnIndexes[spawnIndex]=0;
-
-
-
-            }
-
-        }
-        
-        
     }
 
   

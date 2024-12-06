@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
-using Debug = UnityEngine.Debug;
 
 public class CarController : MonoBehaviour
 {
@@ -27,13 +26,11 @@ public class CarController : MonoBehaviour
     private float currentSteerAngle;
     private float currentBrakeForce;
     private bool isBraking;
-    public bool started = false;
 
     private Rigidbody rb;
 
     private void Start()
     {
-        
         rb = GetComponent<Rigidbody>();
         if (rb == null)
         {
@@ -66,12 +63,10 @@ public class CarController : MonoBehaviour
         TractionControl();
         StabilizeCar(); 
     }
-    
 
     
     private void GetInput()
     {
-        Debug.Log("getting keys");
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
         isBraking = Input.GetKey(KeyCode.Space);
