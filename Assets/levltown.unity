@@ -3493,7 +3493,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boostMultiplier: 2
   boostDuration: 5
-  carController: {fileID: 1057577271}
+  carController: {fileID: 0}
 --- !u!4 &167773544 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 432628, guid: ad215a145679c054ebdefa69f036483e, type: 3}
@@ -4124,86 +4124,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1439825590609749429, guid: af28e02efb1b49bc09580ce7162442e3, type: 3}
   m_PrefabInstance: {fileID: 203989090}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &210712259
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 333870388005985793, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
-      propertyPath: laps
-      value: 
-      objectReference: {fileID: 6097925232965746996}
-    - target: {fileID: 333870388005985793, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
-      propertyPath: pointText
-      value: 
-      objectReference: {fileID: 6741086176031274778}
-    - target: {fileID: 333870388005985793, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
-      propertyPath: Leaderboard
-      value: 
-      objectReference: {fileID: 8251216798195045036}
-    - target: {fileID: 4039730458005871468, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
-      propertyPath: m_Constraints
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 4068578628773583000, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 19.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 4068578628773583000, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 8.23
-      objectReference: {fileID: 0}
-    - target: {fileID: 4068578628773583000, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 23.16
-      objectReference: {fileID: 0}
-    - target: {fileID: 4068578628773583000, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.71704406
-      objectReference: {fileID: 0}
-    - target: {fileID: 4068578628773583000, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.0058362153
-      objectReference: {fileID: 0}
-    - target: {fileID: 4068578628773583000, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.6969094
-      objectReference: {fileID: 0}
-    - target: {fileID: 4068578628773583000, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.011448008
-      objectReference: {fileID: 0}
-    - target: {fileID: 4068578628773583000, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4068578628773583000, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4068578628773583000, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8706736200202057924, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
-      propertyPath: m_Name
-      value: PlayerCarTown
-      objectReference: {fileID: 0}
-    - target: {fileID: 8706736200202057924, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8706736200202057924, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1057577275}
-  m_SourcePrefab: {fileID: 100100000, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
 --- !u!1001 &215547320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9275,7 +9195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boostMultiplier: 2
   boostDuration: 5
-  carController: {fileID: 1057577271}
+  carController: {fileID: 0}
 --- !u!1001 &460427179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12451,7 +12371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boostMultiplier: 2
   boostDuration: 5
-  carController: {fileID: 1057577271}
+  carController: {fileID: 0}
 --- !u!4 &649804624 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3283780387301533269, guid: b85591a506aa1ca4f917a9609cc62f82, type: 3}
@@ -14806,7 +14726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boostMultiplier: 2
   boostDuration: 5
-  carController: {fileID: 1057577271}
+  carController: {fileID: 0}
 --- !u!65 &759864640
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22244,43 +22164,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 451682, guid: a0405954f02b7204994f875c360d4957, type: 3}
   m_PrefabInstance: {fileID: 1055788669}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1057577269 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8706736200202057924, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
-  m_PrefabInstance: {fileID: 210712259}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1057577271 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3663848771287972167, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
-  m_PrefabInstance: {fileID: 210712259}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1057577269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71d905985df2a564e9f8fc6778712bb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!65 &1057577275
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1057577269}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1058607577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26624,8 +26507,8 @@ MonoBehaviour:
   CenterPoint: {fileID: 1552717868}
   currentMouseWorldPosition: {x: 0, y: 0, z: 0}
   move: 0
-  Carprefab: {fileID: 1057577269}
-  Car: {fileID: 1057577269}
+  Carprefab: {fileID: 8706736200202057924, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
+  Car: {fileID: 0}
   rb: {fileID: 0}
   isLaunched: 0
   slingshotCamera: {fileID: 1067344644}
@@ -27051,7 +26934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boostMultiplier: 2
   boostDuration: 5
-  carController: {fileID: 1057577271}
+  carController: {fileID: 0}
 --- !u!1001 &1290555971
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27642,7 +27525,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boostMultiplier: 2
   boostDuration: 5
-  carController: {fileID: 1057577271}
+  carController: {fileID: 0}
 --- !u!1 &1305486606
 GameObject:
   m_ObjectHideFlags: 0
@@ -33556,7 +33439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boostMultiplier: 2
   boostDuration: 5
-  carController: {fileID: 1057577271}
+  carController: {fileID: 0}
 --- !u!1001 &1597297404
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43604,7 +43487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boostMultiplier: 2
   boostDuration: 5
-  carController: {fileID: 1057577271}
+  carController: {fileID: 0}
 --- !u!1001 &1791758857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55596,7 +55479,6 @@ SceneRoots:
   - {fileID: 49449096}
   - {fileID: 1196743907}
   - {fileID: 1140903474}
-  - {fileID: 210712259}
   - {fileID: 904463308}
   - {fileID: 1282091353}
   - {fileID: 456180086}

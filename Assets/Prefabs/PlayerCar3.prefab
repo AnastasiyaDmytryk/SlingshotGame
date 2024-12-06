@@ -10795,6 +10795,8 @@ GameObject:
   - component: {fileID: 3624361127040454839}
   - component: {fileID: 3663848771287972167}
   - component: {fileID: 333870388005985793}
+  - component: {fileID: 6484506324976953583}
+  - component: {fileID: 5788405346355961352}
   m_Layer: 0
   m_Name: PlayerCar3
   m_TagString: Untagged
@@ -10810,7 +10812,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8706736200202057924}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0058362153, y: 0.6969094, z: 0.011448008, w: -0.71704406}
+  m_LocalRotation: {x: 0.0058349133, y: -0.6969094, z: -0.01145035, w: 0.717044}
   m_LocalPosition: {x: 8.168998, y: 0.1999135, z: 5.6647367}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
@@ -10820,7 +10822,7 @@ Transform:
   - {fileID: 9099587061306615291}
   - {fileID: 2912728746912259657}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.435, y: -88.363, z: -1.407}
 --- !u!54 &4039730458005871468
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10846,7 +10848,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 14
   m_CollisionDetection: 0
 --- !u!114 &3624361127040454839
 MonoBehaviour:
@@ -10855,7 +10857,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8706736200202057924}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0fefceefe666bb4682b272ec8c5bdd0, type: 3}
   m_Name: 
@@ -10903,14 +10905,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8706736200202057924}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71d905985df2a564e9f8fc6778712bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 65
+  maxSpeed: 20
   maxReverseSpeed: 45
-  accelerationMultiplier: 2
+  accelerationMultiplier: 1
   maxSteeringAngle: 35
   steeringSpeed: 0.8
   brakeForce: 350
@@ -10955,9 +10957,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laps: {fileID: 0}
   pointText: {fileID: 0}
-  Leaderboard: {fileID: 0}
+  Leaderboard: {fileID: 8251216798654592676, guid: 6bd23aa97fca0f943ae96ac25451c9c8, type: 3}
   lapNum: 0
   points: 0
+--- !u!65 &6484506324976953583
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8706736200202057924}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5788405346355961352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8706736200202057924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62813c61f865e471eb0a424382a6b156, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
 --- !u!1 &8884344995149468101
 GameObject:
   m_ObjectHideFlags: 0
