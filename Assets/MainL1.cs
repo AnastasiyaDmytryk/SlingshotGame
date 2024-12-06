@@ -16,7 +16,6 @@ public class MainL1 : MonoBehaviour
     {
         //carController.enabled=false;
         //carController.started = false; // Disable car movement initially
-        timeController = GetComponent<TimeController> ();
         timeController.enabled=false;
     }
 
