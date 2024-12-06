@@ -11419,7 +11419,7 @@ PrefabInstance:
     - target: {fileID: 5344064838395278154, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
       propertyPath: halfMapObject
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1124288272}
     - target: {fileID: 8706736200202057924, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
       propertyPath: m_Name
       value: PlayerCar3
@@ -23703,6 +23703,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3814185294606463374, guid: 3f7dd0e9bb47425f3b6515ab77926eb2, type: 3}
   m_PrefabInstance: {fileID: 1121549555}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1124288272 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5076031258901297005, guid: 1e8c25a884075894cbece803e27017b9, type: 3}
+  m_PrefabInstance: {fileID: 408341209033363513}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1126677120
 PrefabInstance:
