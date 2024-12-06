@@ -620,10 +620,16 @@ public class CarControllerFinal : MonoBehaviour
         isBoosted = true;
         Debug.Log("speeding");
         int originalMaxSpeed = maxSpeed;
+        int originalAcceleration=accelerationMultiplier;
+
         maxSpeed = Mathf.RoundToInt(maxSpeed * multiplier); 
+        accelerationMultiplier=Mathf.RoundToInt(accelerationMultiplier * multiplier);
         Debug.Log(maxSpeed);
+        Debug.Log("accs"+accelerationMultiplier);
         yield return new WaitForSeconds(duration); 
         maxSpeed = originalMaxSpeed; 
+
+        accelerationMultiplier=originalAcceleration;
 
         isBoosted = false;
     }
