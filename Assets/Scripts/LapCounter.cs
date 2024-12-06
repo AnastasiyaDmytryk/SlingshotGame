@@ -5,9 +5,9 @@ using UnityEngine.UI;
 using TMPro;
 public class LapCounter : MonoBehaviour
 {
-    public TextMeshProUGUI laps;
-    public TextMeshProUGUI pointText;
-    public GameObject Leaderboard, lapObject, halfMapObject, startobj, finishobj;
+    [SerializeField] public TextMeshProUGUI laps;
+    [SerializeField] public TextMeshProUGUI pointText;
+    [SerializeField] public GameObject Leaderboard, lapObject, startobj, finishobj;
     public bool lapActive = true;
     public int lapNum = 0;
     public int points = 0;

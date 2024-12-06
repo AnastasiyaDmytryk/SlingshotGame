@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.InputSystem;
 
 public class PullString : MonoBehaviour
@@ -15,6 +16,11 @@ public class PullString : MonoBehaviour
     public GameObject Car;
     public Rigidbody rb;
     public bool isLaunched;
+
+    //referencing variables
+    [SerializeField] public TextMeshProUGUI laps;
+    [SerializeField] public TextMeshProUGUI pointText;
+    [SerializeField] public GameObject Leaderboard, lapObject, startobj, finishobj;
 
     Camera carCamera; // Reference to the car's camera
     public Camera slingshotCamera; // Reference to the slingshot camera
@@ -32,6 +38,18 @@ public class PullString : MonoBehaviour
         Car = Instantiate(Carprefab, CenterPoint.position, Quaternion.identity);
         Car.transform.localScale = Vector3.one * 0.3f;
         Car.transform.rotation=Quaternion.Euler(0, -90, 0);
+
+        //get variables
+        var prefabScript = Car.GetComponent<LapCounter>();
+        if (prefabScript != null)
+        {
+            prefabScript.laps = laps;
+            prefabScript.pointText = pointText;
+            prefabScript.Leaderboard = Leaderboard;
+            prefabScript.lapObject = lapObject;
+            prefabScript.startobj = startobj;
+            prefabScript.finishobj = finishobj;
+        }
         
         rb = Car.GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezePosition;
