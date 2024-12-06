@@ -22,14 +22,12 @@ public class MainL1 : MonoBehaviour
 
     void Update()
     {
-        
         // Check if the slingshot was pulled and clicked, and the car hasn't been launched yet
         if (pullString.isLaunched== true && !carMoved)
         {
             MoveCarToSpawnPoint();
             pullString.isLaunched = false;
-            Destroy(pullString.gameObject);
-            
+            Destroy(pullString.gameObject);           
             
         }
        

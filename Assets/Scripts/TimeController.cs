@@ -64,7 +64,7 @@ public class TimeController : MonoBehaviour
 
         if(timerActive == true){
             countDown.enabled = true;
-            
+            Debug.Log("countdown start");
             currentTimeCountDown = currentTimeCountDown - Time.deltaTime;
             if(currentTimeCountDown == 4){
                 countDown.text = "3";
@@ -83,7 +83,7 @@ public class TimeController : MonoBehaviour
             countDown.enabled = false;
             timeComplete=true;
             StartClock();
-            Debug.Log("timep completed");
+            Debug.Log("countdown done, clock started");
             //carController.enabled = true;
             //carController.started = true;
             time.text = string.Format("{0:D2}:{1:D2}", timeC.Minutes, timeC.Seconds);

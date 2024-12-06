@@ -100,7 +100,7 @@ public class PullString : MonoBehaviour
         if (cl.started)
         {
             Debug.Log("clicked");
-             launch();
+            launch();
         }
         
     }
