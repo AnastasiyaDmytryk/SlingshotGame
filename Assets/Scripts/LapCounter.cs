@@ -7,7 +7,7 @@ public class LapCounter : MonoBehaviour
 {
     public TextMeshProUGUI laps;
     public TextMeshProUGUI pointText;
-    public GameObject Leaderboard;
+    public GameObject Leaderboard, lapObject, halfMapObject;
     public int lapNum = 0;
     public int points = 0;
     // Start is called before the first frame update
@@ -28,11 +28,15 @@ public class LapCounter : MonoBehaviour
     public void OnTriggerEnter(Collider collision){
         if(collision.gameObject.tag == "Lap"){
             lapNum += 1;
+            lapObject.SetActive(false);
             laps.text = "Lap: " + lapNum +"/3";
         }
         if(collision.gameObject.tag == "pUp"){
             points +=10;
             pointText.text = ("Points: " + points);
+        }
+        if(collision.gameObject.tag == "halfway"){            
+            lapObject.SetActive(true);            
         }
 
     }

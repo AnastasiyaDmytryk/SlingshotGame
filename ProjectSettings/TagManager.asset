@@ -8,6 +8,7 @@ TagManager:
   - Lap
   - pUp
   - Marker
+  - halfway
   layers:
   - Default
   - TransparentFX
