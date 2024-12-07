@@ -69,7 +69,7 @@ public class PullString : MonoBehaviour
 {
     if (ol.performed)
     {
-        Debug.Log("pointing");
+        //Debug.Log("pointing");
         Vector3 temp = Mouse.current?.position.ReadValue() ?? Vector3.zero;
         if (temp == Vector3.zero)
         {

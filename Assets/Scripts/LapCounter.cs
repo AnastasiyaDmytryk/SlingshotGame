@@ -10,7 +10,7 @@ public class LapCounter : MonoBehaviour
     [SerializeField] public GameObject Leaderboard, lapObject, startobj, finishobj;
     public bool lapActive = true;
     public int lapNum = 0;
-    public int points = 0;
+    public static int points = 100;
     // Start is called before the first frame update
     void Start()
     {
