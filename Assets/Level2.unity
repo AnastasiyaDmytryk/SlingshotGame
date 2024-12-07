@@ -13093,10 +13093,16 @@ MonoBehaviour:
   CenterPoint: {fileID: 1655748565}
   currentMouseWorldPosition: {x: 0, y: 0, z: 0}
   move: 0
-  Carprefab: {fileID: 8706736200202057924, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
+  Carprefab: {fileID: 8706736200202057924, guid: 72345facf17f04d9b898bbed1e2476a3, type: 3}
   Car: {fileID: 8706736200202057924, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
   rb: {fileID: 0}
   isLaunched: 0
+  laps: {fileID: 0}
+  pointText: {fileID: 0}
+  Leaderboard: {fileID: 0}
+  lapObject: {fileID: 0}
+  startobj: {fileID: 0}
+  finishobj: {fileID: 0}
   slingshotCamera: {fileID: 2006240991}
 --- !u!114 &1621781503
 MonoBehaviour:
@@ -29190,9 +29196,9 @@ MonoBehaviour:
   time: {fileID: 4957077625055132401}
   title: {fileID: 5378534788290796341}
   countDown: {fileID: 1447502253}
-  player: {fileID: 8706736200202057924, guid: e83afcfb320b96548ac88d0892d60186, type: 3}
-  spawnPoints: []
   timeComplete: 0
+  timerActive: 0
+  startTime: 0
 --- !u!114 &7964211442194207749
 MonoBehaviour:
   m_ObjectHideFlags: 0
