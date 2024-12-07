@@ -9,7 +9,7 @@ public class ScoreManager : MonoBehaviour
    [SerializeField]
    private TMP_InputField inputName;
 
-   public int currentScore = 0;
+   public int currentScore = 100;
 
    public UnityEvent<string, int> submitNameEvent;
 
