@@ -35,7 +35,7 @@ public class MainL1 : MonoBehaviour
         {
             foreach(Transform spawn in spawnPoints)
             {
-                Debug.Log("destriyng spawns");
+                //Debug.Log("destriyng spawns");
                 spawn.gameObject.SetActive(false);                
             }
             //carController.enabled=true;

@@ -5578,7 +5578,7 @@ MonoBehaviour:
   carTransform: {fileID: 4068578628773583000}
   followSpeed: 7.94
   lookSpeed: 3.1
-  offset: {x: 0.05, y: 0.77, z: -1.41}
+  offset: {x: 0, y: 0.85, z: -2.48}
 --- !u!1 &7708203299672332266
 GameObject:
   m_ObjectHideFlags: 0

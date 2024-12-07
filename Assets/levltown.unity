@@ -44741,7 +44741,7 @@ MonoBehaviour:
   countDown: {fileID: 1207995294}
   timeComplete: 0
   timerActive: 0
-  startTime: 4
+  startTime: 3
 --- !u!222 &826360279233979104
 CanvasRenderer:
   m_ObjectHideFlags: 0

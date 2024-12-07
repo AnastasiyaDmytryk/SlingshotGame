@@ -179,15 +179,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ui: Unity assets etc.
-
-    code: us
-
-    Music: source
-
-    sfx: source
-
-'
+  m_text: "Developers:\nKelly Carrigan, Anastasiya Dmytryk, Tanner Wilson\nMenu Backgorund:
+    \nCatlands Games\nLevel Assets from Unity asset store: \nkarboosx,EVILTORN, polyperfect,
+    LowlyPoly\nUi: \nFrom artstation.com by Lucas Das Neves\nLeaderboard: \nDanial
+    Jumagaliyev\nMain Menu Music by Enrico_Dering on pixabay.com\nLevel 1 music by
+    Matrika on uppbeat.io\nLevel 2 Music by Pavel Shilov from Pixabay\nsfx: pixabay.com\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 30a1b9fb6f2ef054db10aec933c76559, type: 2}
   m_sharedMaterial: {fileID: 4330453902302674453, guid: 30a1b9fb6f2ef054db10aec933c76559, type: 2}
@@ -214,8 +210,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 8
+  m_fontSizeBase: 8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1273,7 +1269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &306480959
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9042,7 +9038,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2084914553
 RectTransform:
   m_ObjectHideFlags: 0

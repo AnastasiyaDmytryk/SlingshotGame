@@ -23,6 +23,7 @@ public class TimeController : MonoBehaviour
     public bool timerActive = false;
     public int startTime;
     float currentTimeCountDown;
+    int currentIntVer;
     
 
 
@@ -60,27 +61,31 @@ public class TimeController : MonoBehaviour
         TimeSpan timeT = TimeSpan.FromSeconds(currentTimeCountDown);
 
         if(timerActive == true){
-            //countDown.enabled = true;
+            
             Debug.Log("countdown start");
             currentTimeCountDown = currentTimeCountDown - Time.deltaTime;
-            if(currentTimeCountDown == 4){
+
+            currentIntVer = System.Convert.ToInt32(currentTimeCountDown);
+
+            if(currentIntVer == 3){
                 countDown.text = "3";
-            }else if(currentTimeCountDown == 3){
+            }else if(currentIntVer == 2){
                 countDown.text = "2";
-            }else if(currentTimeCountDown == 2){
+            }else if(currentIntVer == 1){
                 countDown.text = "1";
-            }else if(currentTimeCountDown == 1){
+            }else if(currentIntVer == 0){
                 countDown.text = "Go!";
-            }else if(currentTimeCountDown <= 0){
+            }else if(currentIntVer <= 0){
                 timerActive = false;
+                countDown.enabled = false;
+                Debug.Log("countdown done, clock started");
             }
         }
 
         if(timerActive == false){
-            //countDown.enabled = false;
             timeComplete=true;
             StartClock();
-            Debug.Log("countdown done, clock started");
+           
             //carController.enabled = true;
             //carController.started = true;
             time.text = string.Format("{0:D2}:{1:D2}", timeC.Minutes, timeC.Seconds);
