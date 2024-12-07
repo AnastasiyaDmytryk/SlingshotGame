@@ -25,7 +25,6 @@ public class MainL1 : MonoBehaviour
         timeController.enabled=false;
         //carController.enabled=false;
         //carController.started = false; // Disable car movement initially
-        timeController.enabled= false;
     }
 
     void Update()
