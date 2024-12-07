@@ -9,7 +9,10 @@ public class MainL3 : MonoBehaviour
     public Transform[] spawnPoints; // Array of spawn points
     public TimeController timeController;
     public int[] spawnIndexes = { 6, 1, 2, 3, 4 };
-    public UnityEngine.AI.NavMeshAgent[] aiNavAgents;
+   
+    public GameObject[] AIDrivers; // Prefabs for AI cars
+    public Rigidbody[] AIRb; // Rigidbody components for AI cars
+     public UnityEngine.AI.NavMeshAgent[] aiNavAgents;
 
 
     public bool carMoved = false;

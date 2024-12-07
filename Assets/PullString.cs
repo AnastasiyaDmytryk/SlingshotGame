@@ -36,10 +36,10 @@ public class PullString : MonoBehaviour
 
         // Instantiate the car and find its camera
         Car = Instantiate(Carprefab, CenterPoint.position, Quaternion.identity);
-        Car.transform.localScale = Vector3.one * 0.15f;
+        Car.transform.localScale = Vector3.one * 0.1f;
         Car.transform.rotation=Quaternion.Euler(0, 90, 0);
-        Car.transform.localScale = Vector3.one * 0.3f;
-        Car.transform.rotation=Quaternion.Euler(0, -90, 0);
+        Car.transform.localScale = Vector3.one * 0.1f;
+        Car.transform.rotation=Quaternion.Euler(0, -60, 0);
 
         //get variables
         var prefabScript = Car.GetComponent<LapCounter>();

@@ -7473,7 +7473,7 @@ MonoBehaviour:
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 854694929}
+      - m_Target: {fileID: 854694930}
         m_TargetAssemblyTypeName: PullString, Assembly-CSharp
         m_MethodName: OnLook
         m_Mode: 0
@@ -7493,7 +7493,7 @@ MonoBehaviour:
     m_ActionName: Player/Fire[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 854694929}
+      - m_Target: {fileID: 854694930}
         m_TargetAssemblyTypeName: PullString, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 0
@@ -7670,6 +7670,34 @@ LineRenderer:
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
 --- !u!114 &854694929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854694924}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b6efa1b11f684bcdb83ae6aae8a269c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftPoint: {fileID: 1726077320}
+  RightPoint: {fileID: 340511827}
+  CenterPoint: {fileID: 1234429654}
+  currentMouseWorldPosition: {x: 0, y: 0, z: 0}
+  move: 0
+  Carprefab: {fileID: 8706736200202057924, guid: 72345facf17f04d9b898bbed1e2476a3, type: 3}
+  Car: {fileID: 0}
+  rb: {fileID: 0}
+  isLaunched: 0
+  laps: {fileID: 3722951743246337577}
+  pointText: {fileID: 4217511628543750151}
+  Leaderboard: {fileID: 1379171337}
+  lapObject: {fileID: 17910415}
+  startobj: {fileID: 1206627422}
+  finishobj: {fileID: 548411177}
+  slingshotCamera: {fileID: 2014504449}
+--- !u!114 &854694930
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -22172,6 +22200,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d8dfb42065d4442b6b8095c778daa647, type: 3}
       insertIndex: -1
       addedObject: {fileID: 854694929}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d8dfb42065d4442b6b8095c778daa647, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 854694930}
   m_SourcePrefab: {fileID: 100100000, guid: d8dfb42065d4442b6b8095c778daa647, type: 3}
 --- !u!1001 &1233145798
 PrefabInstance:
@@ -30771,6 +30802,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2074699950}
   - component: {fileID: 2074699951}
+  - component: {fileID: 2074699952}
   m_Layer: 0
   m_Name: SpawnController
   m_TagString: Untagged
@@ -30800,12 +30832,49 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074699948}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e0ba84c07d304158bd5850a2b68a92c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pullString: {fileID: 854694929}
+  spawnPoints:
+  - {fileID: 1286864319}
+  - {fileID: 1816888923}
+  - {fileID: 1222319607}
+  - {fileID: 1553428344}
+  - {fileID: 803068086}
+  timeController: {fileID: 7947303020137098647}
+  spawnIndexes: 0600000001000000020000000300000004000000
+  AIDrivers:
+  - {fileID: 200528373}
+  - {fileID: 1384684537}
+  - {fileID: 1276074193}
+  - {fileID: 1989590645}
+  AIRb:
+  - {fileID: 200528372}
+  - {fileID: 1384684536}
+  - {fileID: 1276074192}
+  - {fileID: 1989590644}
+  aiNavAgents:
+  - {fileID: 200528371}
+  - {fileID: 1384684535}
+  - {fileID: 1276074191}
+  - {fileID: 1989590643}
+  carMoved: 0
+--- !u!114 &2074699952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074699948}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff3ec370cf267441f98302f78eb60970, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pullString: {fileID: 854694929}
+  pullString: {fileID: 854694930}
   spawnPoints:
   - {fileID: 1286864319}
   - {fileID: 1816888923}
