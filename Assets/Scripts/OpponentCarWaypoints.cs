@@ -99,7 +99,7 @@ public class OpponentCarWaypoints : MonoBehaviour
        
         if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
         {
-            Debug.Log(gameObject.name + " reached waypoint " + currentWaypointIndex);
+            //Debug.Log(gameObject.name + " reached waypoint " + currentWaypointIndex);
             AdvanceToNextWaypoint();
         }
     }
@@ -107,7 +107,7 @@ public class OpponentCarWaypoints : MonoBehaviour
     private void AdvanceToNextWaypoint()
     {
         currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Count;
-        Debug.Log(gameObject.name + " advancing to waypoint " + currentWaypointIndex);
+        //Debug.Log(gameObject.name + " advancing to waypoint " + currentWaypointIndex);
         opponentCar.LocateDestination(waypoints[currentWaypointIndex].position);
     }
 }

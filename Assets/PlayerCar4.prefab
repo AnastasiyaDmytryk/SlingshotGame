@@ -5578,7 +5578,7 @@ MonoBehaviour:
   carTransform: {fileID: 4068578628773583000}
   followSpeed: 7.94
   lookSpeed: 3.1
-  offset: {x: 0, y: 0.85, z: -2.48}
+  offset: {x: 0, y: 0.95, z: -3.18}
 --- !u!1 &7708203299672332266
 GameObject:
   m_ObjectHideFlags: 0
@@ -10796,8 +10796,8 @@ GameObject:
   - component: {fileID: 3663848771287972167}
   - component: {fileID: 6484506324976953583}
   - component: {fileID: 5344064838395278154}
-  - component: {fileID: 8294935001940103946}
   - component: {fileID: 7840973353333456540}
+  - component: {fileID: 5899019427470065437}
   m_Layer: 0
   m_Name: PlayerCar4
   m_TagString: Untagged
@@ -10867,7 +10867,7 @@ MonoBehaviour:
   maxReverseSpeed: 25
   accelerationMultiplier: 3
   maxSteeringAngle: 15
-  steeringSpeed: 0.157
+  steeringSpeed: 0.1
   brakeForce: 450
   decelerationMultiplier: 4
   handbrakeDriftMultiplier: 2
@@ -10984,18 +10984,6 @@ MonoBehaviour:
   finishobj: {fileID: 0}
   lapActive: 1
   lapNum: 0
---- !u!114 &8294935001940103946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8706736200202057924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b1c7313a56f34a4194d6085e1558074, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7840973353333456540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11009,6 +10997,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: []
+--- !u!114 &5899019427470065437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8706736200202057924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b1c7313a56f34a4194d6085e1558074, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8884344995149468101
 GameObject:
   m_ObjectHideFlags: 0

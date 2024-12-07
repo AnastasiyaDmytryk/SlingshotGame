@@ -5,8 +5,8 @@ using TMPro;
 
 public class Points : MonoBehaviour
 {
-    public static TextMeshProUGUI pointText;
-    public static int points = 100;
+    public TextMeshProUGUI pointText;
+    public int points = 0;
     
     public void OnTriggerEnter(Collider collision){
         
@@ -20,7 +20,7 @@ public class Points : MonoBehaviour
         pointText.text = points.ToString();
     }
 
-    public static void GetPoints(){
+    public void GetPoints(){
         int gotPoints = points;
         pointText.text = ("Points: " + gotPoints.ToString());
     }
