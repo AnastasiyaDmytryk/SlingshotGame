@@ -11946,6 +11946,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d8dfb42065d4442b6b8095c778daa647, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1621781504}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d8dfb42065d4442b6b8095c778daa647, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1621781505}
   m_SourcePrefab: {fileID: 100100000, guid: d8dfb42065d4442b6b8095c778daa647, type: 3}
 --- !u!1 &1621781499 stripped
 GameObject:
@@ -12093,8 +12096,8 @@ MonoBehaviour:
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1621781504}
-        m_TargetAssemblyTypeName: PullStringL1, Assembly-CSharp
+      - m_Target: {fileID: 1621781505}
+        m_TargetAssemblyTypeName: PullString, Assembly-CSharp
         m_MethodName: OnLook
         m_Mode: 0
         m_Arguments:
@@ -12113,8 +12116,8 @@ MonoBehaviour:
     m_ActionName: Player/Fire[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1621781504}
-        m_TargetAssemblyTypeName: PullStringL1, Assembly-CSharp
+      - m_Target: {fileID: 1621781505}
+        m_TargetAssemblyTypeName: PullString, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 0
         m_Arguments:
@@ -12179,9 +12182,37 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1621781499}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88e2d3aea1dc74e8680c95a45726df5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftPoint: {fileID: 719798335}
+  RightPoint: {fileID: 1366746564}
+  CenterPoint: {fileID: 1655748565}
+  currentMouseWorldPosition: {x: 0, y: 0, z: 0}
+  move: 0
+  Carprefab: {fileID: 8706736200202057924, guid: 72345facf17f04d9b898bbed1e2476a3, type: 3}
+  Car: {fileID: 0}
+  rb: {fileID: 0}
+  isLaunched: 0
+  laps: {fileID: 3722951744169022403}
+  pointText: {fileID: 4217511629634332141}
+  Leaderboard: {fileID: 2048235037}
+  lapObject: {fileID: 859410580}
+  startobj: {fileID: 1570398649}
+  finishobj: {fileID: 524856080}
+  slingshotCamera: {fileID: 2006240991}
+--- !u!114 &1621781505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621781499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f6ccf67d2c2e43c6abb69336eaa2c7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   LeftPoint: {fileID: 719798335}
@@ -12381,6 +12412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1657579674}
   - component: {fileID: 1657579675}
+  - component: {fileID: 1657579676}
   m_Layer: 0
   m_Name: SpawnController
   m_TagString: Untagged
@@ -12410,7 +12442,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1657579672}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c85e7133afd84c87980629086860fb7, type: 3}
   m_Name: 
@@ -12424,6 +12456,35 @@ MonoBehaviour:
   - {fileID: 831041974}
   timeController: {fileID: 7947303018878875773}
   spawnIndexes: 0600000001000000020000000300000004000000
+  carMoved: 0
+  aiNavAgents:
+  - {fileID: 1697305967}
+  - {fileID: 1593460285}
+  - {fileID: 559950609}
+  - {fileID: 400458309}
+--- !u!114 &1657579676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657579672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff3ec370cf267441f98302f78eb60970, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pullString: {fileID: 1621781505}
+  spawnPoints:
+  - {fileID: 830208221}
+  - {fileID: 1915363582}
+  - {fileID: 1116013682}
+  - {fileID: 1158347986}
+  - {fileID: 831041974}
+  timeController: {fileID: 7947303018878875773}
+  spawnIndexes: 0600000001000000020000000300000004000000
+  AIDrivers: []
+  AIRb: []
   carMoved: 0
   aiNavAgents:
   - {fileID: 1697305967}

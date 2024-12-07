@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MainL2 : MonoBehaviour
 {
-    public PullStringL1 pullString; // Reference to the PullString script
+    public PullString pullString; // Reference to the PullString script
     public Transform[] spawnPoints; // Array of spawn points
     public TimeController timeController;
     public int[] spawnIndexes = { 6, 1, 2, 3, 4 };
