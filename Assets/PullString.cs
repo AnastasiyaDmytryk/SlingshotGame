@@ -106,15 +106,23 @@ public class PullString : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-            Vector3 direction = (currentMouseWorldPosition);
-            float step = 3f * Time.deltaTime;
-            CenterPoint.transform.position = direction * step;
-            Car.transform.position = direction;
+   void Update()
+{
+    // Clamp the current mouse position to stay within 2 units of the initial center point
+    Vector3 clampedMousePosition = currentMouseWorldPosition;
+    clampedMousePosition.x = Mathf.Clamp(clampedMousePosition.x, initialCenterPoint.x - 2f, initialCenterPoint.x + 2f);
+    clampedMousePosition.y = Mathf.Clamp(clampedMousePosition.y, initialCenterPoint.y - 2f, initialCenterPoint.y + 2f);
+    clampedMousePosition.z = Mathf.Clamp(clampedMousePosition.z, initialCenterPoint.z - 2f, initialCenterPoint.z + 2f);
 
-            // Moving the rubber
-            SlingshotString.SetPositions(new Vector3[3] { LeftPoint.position, currentMouseWorldPosition, RightPoint.position });
-        
-    }
+    // Update the positions of the CenterPoint and Car
+    float step = 3f * Time.deltaTime;
+    Vector3 newPosition = Vector3.Lerp(CenterPoint.position, clampedMousePosition, step);
+
+    CenterPoint.transform.position = newPosition;
+    Car.transform.position = newPosition;
+
+    // Update the LineRenderer with the clamped position
+    SlingshotString.SetPositions(new Vector3[3] { LeftPoint.position, newPosition, RightPoint.position });
+}
+
 }
