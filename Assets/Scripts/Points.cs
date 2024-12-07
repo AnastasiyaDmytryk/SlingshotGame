@@ -11,14 +11,15 @@ public class Points : MonoBehaviour
     public void OnTriggerEnter(Collider collision){
         
         if(collision.gameObject.tag == "pUp"){
-            AddPoints();
+            points +=10;
+            GetPoints();
         }        
 
     }
-    public void AddPoints(){
+    /*public void AddPoints(){
         points +=10;
         pointText.text = points.ToString();
-    }
+    }*/
 
     public void GetPoints(){
         int gotPoints = points;

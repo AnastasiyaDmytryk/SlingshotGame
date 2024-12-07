@@ -10863,11 +10863,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0fefceefe666bb4682b272ec8c5bdd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 103
+  maxSpeed: 100
   maxReverseSpeed: 25
   accelerationMultiplier: 3
   maxSteeringAngle: 15
-  steeringSpeed: 0.1
+  steeringSpeed: 0.8
   brakeForce: 450
   decelerationMultiplier: 4
   handbrakeDriftMultiplier: 2
@@ -11009,6 +11009,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b1c7313a56f34a4194d6085e1558074, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointText: {fileID: 0}
+  points: 0
 --- !u!1 &8884344995149468101
 GameObject:
   m_ObjectHideFlags: 0
