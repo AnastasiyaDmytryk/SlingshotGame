@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - SpeedUp
+  - Lap
+  - pUp
+  - Marker
   layers:
   - Default
   - TransparentFX
@@ -12,7 +15,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Boost
   - 
   - 
   - 

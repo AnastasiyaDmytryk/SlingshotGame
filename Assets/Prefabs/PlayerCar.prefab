@@ -102,15 +102,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6301142851818038027, guid: 62010132604e8c94d96b4cb4fe6d3394, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 53.553024
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6301142851818038027, guid: 62010132604e8c94d96b4cb4fe6d3394, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0011518598
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6301142851818038027, guid: 62010132604e8c94d96b4cb4fe6d3394, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.3139935
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6301142851818038027, guid: 62010132604e8c94d96b4cb4fe6d3394, type: 3}
       propertyPath: m_LocalRotation.w
@@ -142,7 +142,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6645616114513181105, guid: 62010132604e8c94d96b4cb4fe6d3394, type: 3}
       propertyPath: m_Name
-      value: Free Racing Car Purple Variant Variant
+      value: PlayerCar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -158,6 +158,11 @@ PrefabInstance:
 --- !u!146 &4168271832680725027 stripped
 WheelCollider:
   m_CorrespondingSourceObject: {fileID: 3693936736443218242, guid: 62010132604e8c94d96b4cb4fe6d3394, type: 3}
+  m_PrefabInstance: {fileID: 764436310894429025}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5597364067428149600 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5131295632317934081, guid: 62010132604e8c94d96b4cb4fe6d3394, type: 3}
   m_PrefabInstance: {fileID: 764436310894429025}
   m_PrefabAsset: {fileID: 0}
 --- !u!146 &5832224611718143414 stripped
@@ -182,17 +187,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e307243a11bd77247aa3e2a864cf5cfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  motorForce: 1500
+  isMovementAllowed: 1
+  motorForce: 250
   maxSteeringAngle: 30
   brakeForce: 3000
+  downforce: 75
   frontLeftWheelCollider: {fileID: 6837805466031646916}
   frontRightWheelCollider: {fileID: 4168271832680725027}
   rearLeftWheelCollider: {fileID: 5832224611718143414}
   rearRightWheelCollider: {fileID: 8501376508617656977}
-  frontLeftWheelTransform: {fileID: 0}
-  frontRightWheelTransform: {fileID: 0}
-  rearLeftWheelTransform: {fileID: 0}
-  rearRightWheelTransform: {fileID: 0}
+  frontLeftWheelVisual: {fileID: 9021982933051549242}
+  frontRightWheelVisual: {fileID: 6333383176770468022}
+  rearLeftWheelVisual: {fileID: 5597364067428149600}
+  rearRightWheelVisual: {fileID: 6702389479772296309}
+  started: 1
+--- !u!1 &6333383176770468022 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6737209909912501207, guid: 62010132604e8c94d96b4cb4fe6d3394, type: 3}
+  m_PrefabInstance: {fileID: 764436310894429025}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6702389479772296309 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6311928463395739412, guid: 62010132604e8c94d96b4cb4fe6d3394, type: 3}
+  m_PrefabInstance: {fileID: 764436310894429025}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6767215685251555434 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6301142851818038027, guid: 62010132604e8c94d96b4cb4fe6d3394, type: 3}
@@ -206,5 +224,10 @@ WheelCollider:
 --- !u!146 &8501376508617656977 stripped
 WheelCollider:
   m_CorrespondingSourceObject: {fileID: 9178659444073187824, guid: 62010132604e8c94d96b4cb4fe6d3394, type: 3}
+  m_PrefabInstance: {fileID: 764436310894429025}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9021982933051549242 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8624207928954021211, guid: 62010132604e8c94d96b4cb4fe6d3394, type: 3}
   m_PrefabInstance: {fileID: 764436310894429025}
   m_PrefabAsset: {fileID: 0}
