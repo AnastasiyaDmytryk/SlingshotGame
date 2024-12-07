@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PullString : MonoBehaviour
+public class PullStringL1 : MonoBehaviour
 {
     public Transform LeftPoint;
     public Transform RightPoint;
@@ -31,7 +31,7 @@ public class PullString : MonoBehaviour
         // Instantiate the car and find its camera
         Car = Instantiate(Carprefab, CenterPoint.position, Quaternion.identity);
         Car.transform.localScale = Vector3.one * 0.15f;
-        Car.transform.rotation=Quaternion.Euler(0, 90, 0);
+        Car.transform.rotation=Quaternion.Euler(0, -90, 0);
         
         rb = Car.GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezePosition;

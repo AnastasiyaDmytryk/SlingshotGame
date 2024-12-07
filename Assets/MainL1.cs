@@ -5,22 +5,23 @@ using UnityEngine.UI;
 
 public class MainL1 : MonoBehaviour
 {
-    public PullString pullString;  // Reference to the PullString script
+    public PullStringL1 pullString;  // Reference to the PullString script
     //public CarController carController; // Reference to the CarController script
     public Transform[] spawnPoints;  // Array of spawn points
     public TimeController timeController;
     public int[] spawnIndexes={6,1,2,3,4};
-    public GameObject[] AIDriversPrefabs;
-    public GameObject[] AIDrivers;
-    public Rigidbody[] AIRb;
+
 
     public bool carMoved = false;
+    public UnityEngine.AI.NavMeshAgent[] aiNavAgents;
 
     void Start()
     {
-        
-        //carController.enabled=false;
-        //carController.started = false; // Disable car movement initially
+         foreach(UnityEngine.AI.NavMeshAgent a in aiNavAgents)
+        {
+             a.enabled = false;
+        }
+
         timeController.enabled=false;
     }
 
@@ -75,28 +76,11 @@ public class MainL1 : MonoBehaviour
     }
     void MoveAICars()
     {
-        int numOfCars=0;
-        while(numOfCars<3)
+        foreach(UnityEngine.AI.NavMeshAgent a in aiNavAgents)
         {
-            int spawnIndex = Random.Range(0, spawnPoints.Length-1);
-            if(spawnIndexes[spawnIndex]!=0)
-            {
-                //Debug.Log(spawnIndexes[spawnIndex]);
-                Transform selectedSpawnPoint = spawnPoints[spawnIndex];
-                AIDrivers[numOfCars]=Instantiate(AIDriversPrefabs[numOfCars]);
-                AIRb[numOfCars] = AIDrivers[numOfCars].GetComponent<Rigidbody>();
-                AIDrivers[numOfCars].transform.position=selectedSpawnPoint.position;
-                AIDrivers[numOfCars].transform.localScale = Vector3.one * 0.15f;
-                
-                numOfCars+=1;
-                spawnIndexes[spawnIndex]=0;
-
-
-
-            }
-
+             a.enabled = true;
         }
-        
+    
         
     }
 

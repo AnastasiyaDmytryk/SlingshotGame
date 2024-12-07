@@ -31,7 +31,7 @@ public class PillStringL3 : MonoBehaviour
         // Instantiate the car and find its camera
         Car = Instantiate(Carprefab, CenterPoint.position, Quaternion.identity);
         Car.transform.localScale = Vector3.one * 0.1f;
-        Car.transform.rotation=Quaternion.Euler(0, 180, 0);
+        Car.transform.rotation=Quaternion.Euler(0, -36, 0);
         
         rb = Car.GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezePosition;

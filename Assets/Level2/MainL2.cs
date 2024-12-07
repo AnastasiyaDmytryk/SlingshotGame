@@ -14,9 +14,14 @@ public class MainL2 : MonoBehaviour
     public Rigidbody[] AIRb; // Rigidbody components for AI cars
 
     public bool carMoved = false;
+    public UnityEngine.AI.NavMeshAgent[] aiNavAgents;
 
     void Start()
     {
+         foreach(UnityEngine.AI.NavMeshAgent a in aiNavAgents)
+        {
+             a.enabled = false;
+        }
         timeController.enabled = false;
     }
 
@@ -57,23 +62,13 @@ public class MainL2 : MonoBehaviour
         timeController.enabled = true;
     }
 
-    void MoveAICars()
-    {
-        for (int i = 0; i < AIDrivers.Length; i++)
+       void MoveAICars()
+{
+    
+        foreach(UnityEngine.AI.NavMeshAgent a in aiNavAgents)
         {
-            int spawnIndex = Random.Range(0, spawnPoints.Length - 1);
-
-            if (spawnIndexes[spawnIndex] != 0)
-            {
-                Transform selectedSpawnPoint = spawnPoints[spawnIndex];
-                AIDrivers[i].transform.position = new Vector3( selectedSpawnPoint.position.x,selectedSpawnPoint.position.y,  selectedSpawnPoint.position.z);
-
-                AIDrivers[i].transform.localScale = Vector3.one * 0.1f;
-              
-                spawnIndexes[spawnIndex] = 0;
-            }
+             a.enabled = true;
         }
-
-       
-    }
+    
+}
 }
