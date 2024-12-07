@@ -36,6 +36,8 @@ public class PullString : MonoBehaviour
 
         // Instantiate the car and find its camera
         Car = Instantiate(Carprefab, CenterPoint.position, Quaternion.identity);
+        Car.transform.localScale = Vector3.one * 0.15f;
+        Car.transform.rotation=Quaternion.Euler(0, 90, 0);
         Car.transform.localScale = Vector3.one * 0.3f;
         Car.transform.rotation=Quaternion.Euler(0, -90, 0);
 
@@ -131,15 +133,19 @@ public class PullString : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-            Vector3 direction = (currentMouseWorldPosition);
-            float step = 3f * Time.deltaTime;
-            CenterPoint.transform.position = direction * step;
-            Car.transform.position = direction;
+   void Update()
+{
+    
+    Vector3 clampedMousePosition = currentMouseWorldPosition;
+    clampedMousePosition.x = Mathf.Clamp(clampedMousePosition.x, initialCenterPoint.x - 2f, initialCenterPoint.x + 2f);
+    clampedMousePosition.y = Mathf.Clamp(clampedMousePosition.y, initialCenterPoint.y - 2f, initialCenterPoint.y + 2f);
+    clampedMousePosition.z = Mathf.Clamp(clampedMousePosition.z, initialCenterPoint.z - 2f, initialCenterPoint.z + 2f);
+    float step = 3f * Time.deltaTime;
+    Vector3 newPosition = Vector3.Lerp(CenterPoint.position, clampedMousePosition, step);
 
-            // Moving the rubber
-            SlingshotString.SetPositions(new Vector3[3] { LeftPoint.position, currentMouseWorldPosition, RightPoint.position });
-        
-    }
+    CenterPoint.transform.position = newPosition;
+    Car.transform.position = newPosition;
+    SlingshotString.SetPositions(new Vector3[3] { LeftPoint.position, newPosition, RightPoint.position });
+}
+
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.InputSystem;
 
 public class PillStringL3 : MonoBehaviour
@@ -16,6 +17,11 @@ public class PillStringL3 : MonoBehaviour
     public Rigidbody rb;
     public bool isLaunched;
 
+    //referencing variables
+    [SerializeField] public TextMeshProUGUI laps;
+    [SerializeField] public TextMeshProUGUI pointText;
+    [SerializeField] public GameObject Leaderboard, lapObject, startobj, finishobj;
+
     Camera carCamera; // Reference to the car's camera
     public Camera slingshotCamera; // Reference to the slingshot camera
     float distnaceZ;
@@ -29,10 +35,31 @@ public class PillStringL3 : MonoBehaviour
         SlingshotString.SetPositions(new Vector3[3] { LeftPoint.position, CenterPoint.position, RightPoint.position });
 
         // Instantiate the car and find its camera
+        
         Car = Instantiate(Carprefab, CenterPoint.position, Quaternion.identity);
         Car.transform.localScale = Vector3.one * 0.1f;
-        Car.transform.rotation=Quaternion.Euler(0, -36, 0);
+        Car.transform.rotation=Quaternion.Euler(0, 90, 0);
+        Car.transform.localScale = Vector3.one * 0.3f;
+        Car.transform.rotation=Quaternion.Euler(0, -90, 0);
+
+        //get variables
+        var prefabScript = Car.GetComponent<LapCounter>();
         
+        if (prefabScript != null)
+        {
+            prefabScript.laps = laps;
+            prefabScript.Leaderboard = Leaderboard;
+            prefabScript.lapObject = lapObject;
+            prefabScript.startobj = startobj;
+            prefabScript.finishobj = finishobj;
+        }
+
+        /*var pointScript = Car.GetComponent<Points>();
+        if (pointScript != null)
+        {            
+            pointScript.pointText = pointText;            
+        }*/
+
         rb = Car.GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezePosition;
         rb.constraints = RigidbodyConstraints.FreezeRotation;
@@ -51,7 +78,7 @@ public class PillStringL3 : MonoBehaviour
 {
     if (ol.performed)
     {
-        Debug.Log("pointing");
+        //Debug.Log("pointing");
         Vector3 temp = Mouse.current?.position.ReadValue() ?? Vector3.zero;
         if (temp == Vector3.zero)
         {
@@ -82,7 +109,7 @@ public class PillStringL3 : MonoBehaviour
         if (cl.started)
         {
             Debug.Log("clicked");
-             launch();
+            launch();
         }
         
     }
@@ -94,6 +121,7 @@ public class PillStringL3 : MonoBehaviour
         float launchForce = launchDirection.magnitude * 10f; // Adjust multiplier as needed
 
         isLaunched=true;
+        Debug.Log("click");
 
         // Switch cameras
         if (slingshotCamera != null)
@@ -106,7 +134,7 @@ public class PillStringL3 : MonoBehaviour
         }
     }
 
-     void Update()
+   void Update()
 {
     
     Vector3 clampedMousePosition = currentMouseWorldPosition;
@@ -120,4 +148,5 @@ public class PillStringL3 : MonoBehaviour
     Car.transform.position = newPosition;
     SlingshotString.SetPositions(new Vector3[3] { LeftPoint.position, newPosition, RightPoint.position });
 }
+
 }
