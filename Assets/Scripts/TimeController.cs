@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System;
 
 
 public class TimeController : MonoBehaviour
@@ -12,10 +13,19 @@ public class TimeController : MonoBehaviour
     public TextMeshProUGUI time;
     public TextMeshProUGUI title;
     public TextMeshProUGUI countDown;
-    public GameObject player;
-   // public CarController carController;
-    public Transform[] spawnPoints;
     public bool timeComplete;
+
+    //TIMERCLOCKTHING
+    bool clockActive = false;
+    float currentTimeClock;
+
+    //TIMERFORCOUNTDOWN
+    public bool timerActive = false;
+    public int startTime;
+    float currentTimeCountDown;
+    int currentIntVer;
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +33,9 @@ public class TimeController : MonoBehaviour
         
         //carController.enabled=false;
         timeComplete=false;
+        currentTimeClock = 0;
+        currentTimeCountDown = startTime;
+        StartTimer();
     }
 
     // Update is called once per frame
@@ -40,33 +53,54 @@ public class TimeController : MonoBehaviour
             title.text = "Level 3";
         }
 
-        float timeSinceLoad = Time.timeSinceLevelLoad -4;
-        int minutes = (int)((timeSinceLoad % 3600) / 60);
-        int seconds = (int)(timeSinceLoad % 60);
+        if(clockActive == true){
+            currentTimeClock = currentTimeClock + Time.deltaTime;
+        }
+        TimeSpan timeC = TimeSpan.FromSeconds(currentTimeClock);
+        //clockText.text = time.Minutes.ToString() + ":" + time.Seconds.ToString();
+        TimeSpan timeT = TimeSpan.FromSeconds(currentTimeCountDown);
 
-        if(seconds == -3){
-            countDown.text = "3";
-        }else if(seconds == -2){
-            countDown.text = "2";
-        }else if(seconds == -1){
-            countDown.text = "1";
-        }else if(seconds == 0){
-            countDown.text = "Go!";
+        if(timerActive == true){
             
-            
-            
-           
+            Debug.Log("countdown start");
+            currentTimeCountDown = currentTimeCountDown - Time.deltaTime;
 
-        }else if(seconds > 0){
-            countDown.enabled = false;
+            currentIntVer = System.Convert.ToInt32(currentTimeCountDown);
+
+            if(currentIntVer == 3){
+                countDown.text = "3";
+            }else if(currentIntVer == 2){
+                countDown.text = "2";
+            }else if(currentIntVer == 1){
+                countDown.text = "1";
+            }else if(currentIntVer == 0){
+                countDown.text = "Go!";
+            }else if(currentIntVer <= 0){
+                timerActive = false;
+                countDown.enabled = false;
+                Debug.Log("countdown done, clock started");
+            }
+        }
+
+        if(timerActive == false){
             timeComplete=true;
-            Debug.Log("timep completed");
+            StartClock();
+           
             //carController.enabled = true;
             //carController.started = true;
-            time.text = string.Format("{0:D2}:{1:D2}", minutes, seconds);
+            time.text = string.Format("{0:D2}:{1:D2}", timeC.Minutes, timeC.Seconds);
         }
 
     }
+
+    public void StartClock(){
+        clockActive = true;
+    }
+
+    public void StartTimer(){
+        timerActive = true;
+    }
+    
 
 
 }

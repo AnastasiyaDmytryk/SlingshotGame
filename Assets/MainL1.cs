@@ -23,11 +23,13 @@ public class MainL1 : MonoBehaviour
         }
 
         timeController.enabled=false;
+        //carController.enabled=false;
+        //carController.started = false; // Disable car movement initially
+        timeController.enabled= false;
     }
 
     void Update()
     {
-        
         // Check if the slingshot was pulled and clicked, and the car hasn't been launched yet
         if (pullString.isLaunched== true && !carMoved)
         {
@@ -37,6 +39,9 @@ public class MainL1 : MonoBehaviour
             MoveAICars();
             
             
+            Destroy(pullString.gameObject); 
+            timeController.enabled=true;          
+            Debug.Log("click");
         }
        
         if(timeController.timeComplete && spawnPoints.Length>0)
@@ -46,6 +51,7 @@ public class MainL1 : MonoBehaviour
                 //Debug.Log("destriyng spawns");
                 spawn.gameObject.SetActive(false);
                 
+                spawn.gameObject.SetActive(false);                
             }
             //carController.enabled=true;
             
@@ -69,9 +75,7 @@ public class MainL1 : MonoBehaviour
         // Move the car to the selected spawn point
         Transform selectedSpawnPoint = spawnPoints[spawnIndex];
         pullString.Car.transform.position = selectedSpawnPoint.position;
-        carMoved=true;
-        timeController.enabled=true;
-         
+        carMoved=true;        
        
     }
     void MoveAICars()
