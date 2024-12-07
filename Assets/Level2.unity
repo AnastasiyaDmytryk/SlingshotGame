@@ -19278,6 +19278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointText: {fileID: 4217511629634332141}
+  scoretext: {fileID: 370137779}
   points: 0
 --- !u!114 &2048235039
 MonoBehaviour:

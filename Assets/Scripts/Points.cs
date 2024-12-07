@@ -6,6 +6,7 @@ using TMPro;
 public class Points : MonoBehaviour
 {
     public TextMeshProUGUI pointText;
+    public TextMeshProUGUI scoretext;
     public int points = 0;
     
     public void OnTriggerEnter(Collider collision){
@@ -24,6 +25,10 @@ public class Points : MonoBehaviour
     public void GetPoints(){
         int gotPoints = points;
         pointText.text = ("Points: " + gotPoints.ToString());
+    }
+
+    void update(){
+        scoretext.text = pointText.text;
     }
 
 }
