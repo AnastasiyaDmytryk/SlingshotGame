@@ -25,4 +25,5 @@ public class Points : MonoBehaviour
         int gotPoints = points;
         pointText.text = ("Points: " + gotPoints.ToString());
     }
+
 }

@@ -34,8 +34,8 @@ public class LapCounter : MonoBehaviour
     public void OnTriggerEnter(Collider collision){
         if(collision.gameObject.tag == "Lap"){
             lapNum += 1;
-            lapObject.SetActive(false);
-            lapActive = false;
+            //lapObject.SetActive(false);
+            //lapActive = false;
             laps.text = "Lap: " + lapNum +"/3";
         }
         /*if(collision.gameObject.tag == "pUp"){
