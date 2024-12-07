@@ -6,11 +6,11 @@ using TMPro;
 public class LapCounter : MonoBehaviour
 {
     [SerializeField] public TextMeshProUGUI laps;
-    [SerializeField] public TextMeshProUGUI pointText;
+    //[SerializeField] public TextMeshProUGUI pointText;
     [SerializeField] public GameObject Leaderboard, lapObject, startobj, finishobj;
     public bool lapActive = true;
     public int lapNum = 0;
-    public static int points = 100;
+    //public static int points = 100;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,10 +38,10 @@ public class LapCounter : MonoBehaviour
             lapActive = false;
             laps.text = "Lap: " + lapNum +"/3";
         }
-        if(collision.gameObject.tag == "pUp"){
+        /*if(collision.gameObject.tag == "pUp"){
             points +=10;
             pointText.text = ("Points: " + points);
-        }
+        }*/
         if(collision.gameObject.tag == "halfway"){            
             lapObject.SetActive(true);  
             lapActive = true;          

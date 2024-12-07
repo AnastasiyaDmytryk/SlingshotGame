@@ -41,16 +41,22 @@ public class PullString : MonoBehaviour
 
         //get variables
         var prefabScript = Car.GetComponent<LapCounter>();
+        
         if (prefabScript != null)
         {
             prefabScript.laps = laps;
-            prefabScript.pointText = pointText;
             prefabScript.Leaderboard = Leaderboard;
             prefabScript.lapObject = lapObject;
             prefabScript.startobj = startobj;
             prefabScript.finishobj = finishobj;
         }
-        
+
+        /*var pointScript = Car.GetComponent<Points>();
+        if (pointScript != null)
+        {            
+            pointScript.pointText = pointText;            
+        }*/
+
         rb = Car.GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezePosition;
         rb.constraints = RigidbodyConstraints.FreezeRotation;

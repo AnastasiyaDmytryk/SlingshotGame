@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class StartGame : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class StartGame : MonoBehaviour
     {
         SceneManager.LoadScene("Level2");
         Time.timeScale = 1f;
+        
     }
 
     public void goToLevel3()
@@ -32,6 +34,6 @@ public class StartGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        var pointScr = GetComponent<Points>();
     }
 }
